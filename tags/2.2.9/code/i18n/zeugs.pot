@@ -1,0 +1,1967 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2007-09-17 21:22+CEST\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: ENCODING\n"
+"Generated-By: pygettext.py 1.5\n"
+
+
+#: gui/ui_checkSpell.py:116
+msgid "Check Spelling"
+msgstr ""
+
+#: gui/ui_checkSpell.py:117
+msgid "Not in dictionary"
+msgstr ""
+
+#: gui/ui_checkSpell.py:118
+msgid "&Ignore"
+msgstr ""
+
+#: gui/ui_checkSpell.py:119
+msgid "Ignore &All"
+msgstr ""
+
+#: gui/ui_checkSpell.py:120
+msgid "A&dd"
+msgstr ""
+
+#: gui/ui_checkSpell.py:121
+msgid "Suggestions"
+msgstr ""
+
+#: gui/ui_checkSpell.py:122
+msgid "&Change"
+msgstr ""
+
+#: gui/ui_checkSpell.py:123
+msgid "Change A&ll"
+msgstr ""
+
+#: gui/ui_checkSpell.py:124
+msgid "Clo&se"
+msgstr ""
+
+#: gui/ui_configEd.py:134
+msgid "Configuration/Layout Editor"
+msgstr ""
+
+#: gui/ui_configEd.py:135
+msgid "Switch to a different configuration file"
+msgstr ""
+
+#: gui/ui_configEd.py:136
+msgid "Open"
+msgstr ""
+
+#: gui/ui_configEd.py:137
+msgid "Replace images"
+msgstr ""
+
+#: gui/ui_configEd.py:138
+msgid "Import pupils"
+msgstr ""
+
+#: gui/ui_configEd.py:139
+msgid "Field Name                 "
+msgstr ""
+
+#: gui/ui_configEd.py:140
+msgid "Value"
+msgstr ""
+
+#: gui/ui_configEd.py:141
+msgid "Make a copy of the current node"
+msgstr ""
+
+#: gui/ui_configEd.py:142
+msgid "Clone"
+msgstr ""
+
+#: gui/ui_configEd.py:143
+msgid "Remove the current node"
+msgstr ""
+
+#: gui/ui_configEd.py:144 gui/ui_zgcp.py:271
+msgid "Delete"
+msgstr ""
+
+#: gui/ui_configEd.py:145
+msgid "Save to temporary file"
+msgstr ""
+
+#: gui/ui_configEd.py:146
+msgid "Save"
+msgstr ""
+
+#: gui/ui_configEd.py:147
+msgid "Save the changes and exit the program"
+msgstr ""
+
+#: gui/ui_configEd.py:148 gui/ui_dlg_appSelect.py:125 gui/ui_zgcp.py:260
+#: gui/ui_zgsync.py:137
+msgid "Quit"
+msgstr ""
+
+#: gui/ui_dlg_appSelect.py:108
+msgid "Zeugs: select application"
+msgstr ""
+
+#: gui/ui_dlg_appSelect.py:109
+msgid "Text bigger"
+msgstr ""
+
+#: gui/ui_dlg_appSelect.py:110
+msgid "Text smaller"
+msgstr ""
+
+#: gui/ui_dlg_appSelect.py:111
+msgid "Enter the report editor"
+msgstr ""
+
+#: gui/ui_dlg_appSelect.py:112
+msgid "Edit reports"
+msgstr ""
+
+#: gui/ui_dlg_appSelect.py:113
+msgid "Synchronize a user database with the master"
+msgstr ""
+
+#: gui/ui_dlg_appSelect.py:114
+msgid "Synchronize database"
+msgstr ""
+
+#: gui/ui_dlg_appSelect.py:115
+msgid "Print whole reports or single pages"
+msgstr ""
+
+#: gui/ui_dlg_appSelect.py:116
+msgid "Print reports"
+msgstr ""
+
+#: gui/ui_dlg_appSelect.py:117
+msgid "User"
+msgstr ""
+
+#: gui/ui_dlg_appSelect.py:118
+msgid "Administrative functions for the master database"
+msgstr ""
+
+#: gui/ui_dlg_appSelect.py:119
+msgid "Control Panel"
+msgstr ""
+
+#: gui/ui_dlg_appSelect.py:120
+msgid "Configuration/Layout editor "
+msgstr ""
+
+#: gui/ui_dlg_appSelect.py:121
+msgid "Database setup"
+msgstr ""
+
+#: gui/ui_dlg_appSelect.py:122
+msgid "Should be run once only, when the Zeugs system is installed"
+msgstr ""
+
+#: gui/ui_dlg_appSelect.py:123
+msgid "Initialize master database"
+msgstr ""
+
+#: gui/ui_dlg_appSelect.py:124
+msgid "Administrator"
+msgstr ""
+
+#: gui/ui_dlg_connect.py:94 gui/ui_dlg_getPw.py:112
+msgid "Connect to Zeugs"
+msgstr ""
+
+#: gui/ui_dlg_connect.py:95 gui/ui_dlg_getPw.py:113
+msgid "C&onnect"
+msgstr ""
+
+#: gui/ui_dlg_connect.py:96 gui/ui_dlg_getPw.py:114
+msgid "&Cancel"
+msgstr ""
+
+#: gui/ui_dlg_connect.py:97 gui/ui_dlg_getPw.py:115
+msgid "&Password:"
+msgstr ""
+
+#: gui/ui_dlg_connect.py:98 gui/ui_dlg_getPw.py:118
+msgid "&Host:"
+msgstr ""
+
+#: gui/ui_dlg_connect.py:99
+msgid "Enter Connection Information"
+msgstr ""
+
+#: gui/ui_dlg_connect.py:100 gui/ui_dlg_getPw.py:116
+msgid "&User:"
+msgstr ""
+
+#: gui/ui_dlg_csv.py:67
+msgid "Specify csv-Format"
+msgstr ""
+
+#: gui/ui_dlg_csv.py:68
+msgid "Column separator"
+msgstr ""
+
+#: gui/ui_dlg_csv.py:69
+msgid ";"
+msgstr ""
+
+#: gui/ui_dlg_csv.py:70
+msgid ","
+msgstr ""
+
+#: gui/ui_dlg_csv.py:71
+msgid "<tab>"
+msgstr ""
+
+#: gui/ui_dlg_editPrint.py:120
+msgid "Print Reports"
+msgstr ""
+
+#: gui/ui_dlg_editPrint.py:121
+msgid "Pages from"
+msgstr ""
+
+#: gui/ui_dlg_editPrint.py:122
+msgid "to"
+msgstr ""
+
+#: gui/ui_dlg_editPrint.py:123
+msgid "last page first"
+msgstr ""
+
+#: gui/ui_dlg_editPrint.py:124
+msgid "print to file (pdf)"
+msgstr ""
+
+#: gui/ui_dlg_editPrint.py:125
+msgid "odd pages"
+msgstr ""
+
+#: gui/ui_dlg_editPrint.py:126
+msgid "even pages"
+msgstr ""
+
+#: gui/ui_dlg_editPrint.py:127 gui/ui_output.py:48 gui/ui_report.py:47
+#: gui/ui_zgsetup.py:57 zgcommon/guiDialogs.py:38 zgcommon/guiDialogs.py:65
+#: zgcommon/guiDialogs.py:90 zgcommon/guiDialogs.py:95
+#: zgcommon/guiDialogs.py:106
+msgid "OK"
+msgstr ""
+
+#: gui/ui_dlg_editPrint.py:128 gui/ui_dlg_pw.py:64 gui/ui_zgprint.py:195
+#: gui/ui_zgsetup.py:56 zgcommon/guiDialogs.py:39 zgcommon/guiDialogs.py:66
+#: zgcommon/guiDialogs.py:106
+msgid "Cancel"
+msgstr ""
+
+#: gui/ui_dlg_getPw.py:117
+msgid "Database:"
+msgstr ""
+
+#: gui/ui_dlg_getPw.py:119
+msgid "Enter Password"
+msgstr ""
+
+#: gui/ui_dlg_newNode.py:41
+msgid "New Node"
+msgstr ""
+
+#: gui/ui_dlg_newNode.py:42
+msgid "Enter the name for the new node:"
+msgstr ""
+
+#: gui/ui_dlg_pw.py:60
+msgid "New Password"
+msgstr ""
+
+#: gui/ui_dlg_pw.py:61
+msgid "Enter password:"
+msgstr ""
+
+#: gui/ui_dlg_pw.py:62
+msgid "Repeat password:"
+msgstr ""
+
+#: gui/ui_dlg_pw.py:63
+msgid "Accept"
+msgstr ""
+
+#: gui/ui_output.py:47
+msgid "Progress report"
+msgstr ""
+
+#: gui/ui_zgcp.py:256
+msgid "Zeugs Control Panel"
+msgstr ""
+
+#: gui/ui_zgcp.py:257
+msgid "Current Database"
+msgstr ""
+
+#: gui/ui_zgcp.py:258
+msgid "Host"
+msgstr ""
+
+#: gui/ui_zgcp.py:259 zgcp/guiCP.py:135
+msgid "Active"
+msgstr ""
+
+#: gui/ui_zgcp.py:261
+msgid "Update"
+msgstr ""
+
+#: gui/ui_zgcp.py:262 zgcp/guiCP.py:133
+msgid "Finalized"
+msgstr ""
+
+#: gui/ui_zgcp.py:263
+msgid "Backup"
+msgstr ""
+
+#: gui/ui_zgcp.py:264 gui/ui_zgedit.py:315 gui/ui_zgprint.py:194
+msgid "Print"
+msgstr ""
+
+#: gui/ui_zgcp.py:265
+msgid "New"
+msgstr ""
+
+#: gui/ui_zgcp.py:266
+msgid "Synchronize with user file"
+msgstr ""
+
+#: gui/ui_zgcp.py:267 gui/ui_zgedit.py:334 gui/ui_zgsync.py:136
+msgid "Synchronize"
+msgstr ""
+
+#: gui/ui_zgcp.py:268
+msgid "Extra"
+msgstr ""
+
+#: gui/ui_zgcp.py:269
+msgid "Restore from backup"
+msgstr ""
+
+#: gui/ui_zgcp.py:270
+msgid "Dump config files"
+msgstr ""
+
+#: gui/ui_zgcp.py:272
+msgid "database"
+msgstr ""
+
+#: gui/ui_zgcp.py:273
+msgid "Generate user databases"
+msgstr ""
+
+#: gui/ui_zgcp.py:274
+msgid "Reset password"
+msgstr ""
+
+#: gui/ui_zgcp.py:275 gui/ui_zgprint.py:191
+msgid "Select all"
+msgstr ""
+
+#: gui/ui_zgcp.py:276
+msgid "Invert selection"
+msgstr ""
+
+#: gui/ui_zgcp.py:277
+msgid "Unselect all"
+msgstr ""
+
+#: gui/ui_zgcp.py:278
+msgid "teachers"
+msgstr ""
+
+#: gui/ui_zgedit.py:284
+msgid "MainWindow"
+msgstr ""
+
+#: gui/ui_zgedit.py:285 gui/ui_zgprint.py:179
+msgid "Class"
+msgstr ""
+
+#: gui/ui_zgedit.py:286
+msgid "Subject"
+msgstr ""
+
+#: gui/ui_zgedit.py:287
+msgid "Pupil"
+msgstr ""
+
+#: gui/ui_zgedit.py:288
+msgid "Previous pupil"
+msgstr ""
+
+#: gui/ui_zgedit.py:289
+msgid "Next pupil"
+msgstr ""
+
+#: gui/ui_zgedit.py:290
+msgid "Teacher:"
+msgstr ""
+
+#: gui/ui_zgedit.py:291
+msgid "Click on a character to insert it in the text"
+msgstr ""
+
+#: gui/ui_zgedit.py:292
+msgid "&File"
+msgstr ""
+
+#: gui/ui_zgedit.py:293
+msgid "&Edit"
+msgstr ""
+
+#: gui/ui_zgedit.py:294
+msgid "&Report"
+msgstr ""
+
+#: gui/ui_zgedit.py:295
+msgid "&Copy"
+msgstr ""
+
+#: gui/ui_zgedit.py:296
+msgid "Copy marked text"
+msgstr ""
+
+#: gui/ui_zgedit.py:297
+msgid "Ctrl+C"
+msgstr ""
+
+#: gui/ui_zgedit.py:298
+msgid "Cu&t"
+msgstr ""
+
+#: gui/ui_zgedit.py:299
+msgid "Cut marked text"
+msgstr ""
+
+#: gui/ui_zgedit.py:300
+msgid "Ctrl+X"
+msgstr ""
+
+#: gui/ui_zgedit.py:301
+msgid "&Paste"
+msgstr ""
+
+#: gui/ui_zgedit.py:302
+msgid "Paste to cursor position"
+msgstr ""
+
+#: gui/ui_zgedit.py:303
+msgid "Ctrl+V"
+msgstr ""
+
+#: gui/ui_zgedit.py:304
+msgid "&Undo"
+msgstr ""
+
+#: gui/ui_zgedit.py:305
+msgid "Undo last editing operation(s)"
+msgstr ""
+
+#: gui/ui_zgedit.py:306
+msgid "&Redo"
+msgstr ""
+
+#: gui/ui_zgedit.py:307
+msgid "Redo last undone editing operation"
+msgstr ""
+
+#: gui/ui_zgedit.py:308
+msgid "Special style text"
+msgstr ""
+
+#: gui/ui_zgedit.py:309
+msgid "Normal style text"
+msgstr ""
+
+#: gui/ui_zgedit.py:310
+msgid "Special style text (right aligned)"
+msgstr ""
+
+#: gui/ui_zgedit.py:311
+msgid "indent"
+msgstr ""
+
+#: gui/ui_zgedit.py:312
+msgid "Increase line indentation"
+msgstr ""
+
+#: gui/ui_zgedit.py:313
+msgid "unindent"
+msgstr ""
+
+#: gui/ui_zgedit.py:314
+msgid "Decrease line indentation"
+msgstr ""
+
+#: gui/ui_zgedit.py:316
+msgid "Print all reports for this subject"
+msgstr ""
+
+#: gui/ui_zgedit.py:317
+msgid "Ctrl+P"
+msgstr ""
+
+#: gui/ui_zgedit.py:318 gui/ui_zgedit.py:319
+msgid "Report completed"
+msgstr ""
+
+#: gui/ui_zgedit.py:320
+msgid "&Open"
+msgstr ""
+
+#: gui/ui_zgedit.py:321
+msgid "Open Report Database"
+msgstr ""
+
+#: gui/ui_zgedit.py:322
+msgid "Ctrl+O"
+msgstr ""
+
+#: gui/ui_zgedit.py:323
+msgid "&Quit"
+msgstr ""
+
+#: gui/ui_zgedit.py:324
+msgid "Ctrl+Q"
+msgstr ""
+
+#: gui/ui_zgedit.py:325
+msgid "Next unfinished report"
+msgstr ""
+
+#: gui/ui_zgedit.py:326
+msgid "Go to next uncompleted report"
+msgstr ""
+
+#: gui/ui_zgedit.py:327
+msgid "Auto-spellcheck"
+msgstr ""
+
+#: gui/ui_zgedit.py:328
+msgid "Automatic spellchecking"
+msgstr ""
+
+#: gui/ui_zgedit.py:329 gui/ui_zgedit.py:330
+msgid "Check spelling"
+msgstr ""
+
+#: gui/ui_zgedit.py:331
+msgid "Interactive spelling checker"
+msgstr ""
+
+#: gui/ui_zgedit.py:332
+msgid "Print this report"
+msgstr ""
+
+#: gui/ui_zgedit.py:333
+msgid "Print just this report"
+msgstr ""
+
+#: gui/ui_zgprint.py:177 gui/ui_zgsync.py:128
+msgid "Form"
+msgstr ""
+
+#: gui/ui_zgprint.py:178
+msgid "Open report file"
+msgstr ""
+
+#: gui/ui_zgprint.py:180
+msgid "Select all pupils"
+msgstr ""
+
+#: gui/ui_zgprint.py:181
+msgid "Unselect all pupils"
+msgstr ""
+
+#: gui/ui_zgprint.py:182
+msgid "Shrink to A4"
+msgstr ""
+
+#: gui/ui_zgprint.py:183
+msgid "Landscape orientation"
+msgstr ""
+
+#: gui/ui_zgprint.py:184
+msgid "Last page first"
+msgstr ""
+
+#: gui/ui_zgprint.py:185
+msgid "Print to file (pdf)"
+msgstr ""
+
+#: gui/ui_zgprint.py:186
+msgid "Pupils"
+msgstr ""
+
+#: gui/ui_zgprint.py:187
+msgid "Sheet selection"
+msgstr ""
+
+#: gui/ui_zgprint.py:188
+msgid "A3 sheets"
+msgstr ""
+
+#: gui/ui_zgprint.py:189
+msgid "A4 sheets"
+msgstr ""
+
+#: gui/ui_zgprint.py:190
+msgid "Individual pages"
+msgstr ""
+
+#: gui/ui_zgprint.py:192
+msgid "Messages"
+msgstr ""
+
+#: gui/ui_zgprint.py:193
+msgid "Preview"
+msgstr ""
+
+#: gui/ui_zgsetup.py:51
+msgid "zgsetup - initialize database"
+msgstr ""
+
+#: gui/ui_zgsync.py:129
+msgid "User Database:"
+msgstr ""
+
+#: gui/ui_zgsync.py:130
+msgid "Change file"
+msgstr ""
+
+#: gui/ui_zgsync.py:131
+msgid "Master Database"
+msgstr ""
+
+#: gui/ui_zgsync.py:132
+msgid "Host:"
+msgstr ""
+
+#: gui/ui_zgsync.py:133
+msgid "User:"
+msgstr ""
+
+#: gui/ui_zgsync.py:134
+msgid "Change Password"
+msgstr ""
+
+#: gui/ui_zgsync.py:135
+msgid "Name:"
+msgstr ""
+
+#: zgcommon/backup.py:44
+msgid "Overwrite?"
+msgstr ""
+
+#: zgcommon/backup.py:45
+msgid "File '%s' exists already. Delete it?"
+msgstr ""
+
+#: zgcommon/backup.py:50
+msgid "Couldn't delete file '%s'"
+msgstr ""
+
+#: zgcommon/backup.py:101 zgcommon/backup.py:247
+msgid "Creating table '%s'"
+msgstr ""
+
+#: zgcommon/backup.py:105 zgcommon/backup.py:250
+msgid "Creating table 'data'"
+msgstr ""
+
+#: zgcommon/backup.py:115
+msgid "Copying reports ..."
+msgstr ""
+
+#: zgcommon/backup.py:165 zgcommon/backup.py:280 zgcp/makeMaster.py:94
+msgid "DONE!"
+msgstr ""
+
+#: zgcommon/backup.py:170
+msgid "Couldn't create database file. Removing incomplete file (%1)"
+msgstr ""
+
+#: zgcommon/backup.py:185 zgcommon/backup.py:295
+msgid "Couldn't create table '%1'"
+msgstr ""
+
+#: zgcommon/backup.py:255
+msgid "Created interface table"
+msgstr ""
+
+#: zgcommon/backup.py:258
+msgid "Creating teacher report tables ..."
+msgstr ""
+
+#: zgcommon/backup.py:284
+msgid "Couldn't restore database"
+msgstr ""
+
+#: zgcommon/checkSpell.py:114
+msgid "Spelling check completed"
+msgstr ""
+
+#: zgcommon/database.py:66
+msgid "File '%1' is not a 'Zeugs' database, version '%2'"
+msgstr ""
+
+#: zgcommon/database.py:410
+msgid "Select database file"
+msgstr ""
+
+#: zgcommon/database.py:413 zgsync/synchronize.py:78
+msgid "Database Files"
+msgstr ""
+
+#: zgcommon/database.py:454
+msgid "Pupil '%1' has more than one entry for subject '%2'"
+msgstr ""
+
+#: zgcommon/dbWrap.py:50
+msgid ""
+"Couldn't create database file '%1':\n"
+"    File exists already"
+msgstr ""
+
+#: zgcommon/dbWrap.py:56
+msgid "Couldn't create database file '%1'"
+msgstr ""
+
+#: zgcommon/dbWrap.py:66 zgcp/controlPanel.py:260 zgcp/controlPanel.py:532
+msgid "Couldn't open database file '%1'"
+msgstr ""
+
+#: zgcommon/dbWrapMaster.py:272
+msgid "Problem removing user"
+msgstr ""
+
+#: zgcommon/dbWrapMaster.py:273
+msgid ""
+"Couldn't drop user '%s'.\n"
+"Alter its properties?"
+msgstr ""
+
+#: zgcommon/framework.py:60
+msgid ""
+"Program Error - please report\n"
+"\n"
+"%1"
+msgstr ""
+
+#: zgcommon/framework.py:86 zgcp/csv2sini.py:76
+msgid "Warning"
+msgstr ""
+
+#: zgcommon/framework.py:99
+msgid "Error"
+msgstr ""
+
+#: zgcommon/framework.py:107 zgcp/configEd.py:306
+msgid "Information"
+msgstr ""
+
+#: zgcommon/guiBase.py:78
+msgid "Font not available: '%s'"
+msgstr ""
+
+#: zgcommon/guiDialogs.py:35 zgcommon/guiDialogs.py:62
+msgid "Look in:"
+msgstr ""
+
+#: zgcommon/guiDialogs.py:36
+msgid "Directory name:"
+msgstr ""
+
+#: zgcommon/guiDialogs.py:37 zgcommon/guiDialogs.py:64
+msgid "Files of type:"
+msgstr ""
+
+#: zgcommon/guiDialogs.py:63
+msgid "File name:"
+msgstr ""
+
+#: zgcommon/newPassword.py:50
+msgid "Passwords don't match, try again"
+msgstr ""
+
+#: zgcommon/newUser.py:50
+msgid "A login name must be given"
+msgstr ""
+
+#: zgcommon/rsubject.py:161
+msgid ""
+"No frames left for text:\n"
+"   %1"
+msgstr ""
+
+#: zgcommon/spellCheck.py:49
+msgid ""
+"Couldn't find dictionary for language %s.\n"
+"Spelling checks will be disabled"
+msgstr ""
+
+#: zgcp/configEd.py:81
+msgid "Choose Configuration File"
+msgstr ""
+
+#: zgcp/configEd.py:83 zgcp/configEd.py:320
+msgid "zip Files"
+msgstr ""
+
+#: zgcp/configEd.py:94
+msgid "The supplied configuration file (%s) could not be opened. A completely empty configuration will be created."
+msgstr ""
+
+#: zgcp/configEd.py:100
+msgid "Config Editor: %s"
+msgstr ""
+
+#: zgcp/configEd.py:101
+msgid "For database: %s"
+msgstr ""
+
+#: zgcp/configEd.py:307
+msgid "Saved as '%s'"
+msgstr ""
+
+#: zgcp/configEd.py:314
+msgid "Could not save data to '%s'"
+msgstr ""
+
+#: zgcp/configEd.py:317
+msgid "Save file to"
+msgstr ""
+
+#: zgcp/configEd.py:328
+msgid "Replace existing file?"
+msgstr ""
+
+#: zgcp/configEd.py:329
+msgid ""
+"The changes have been saved to '%s'.\n"
+"Should this now replace the previous data?"
+msgstr ""
+
+#: zgcp/configEd.py:350
+msgid "Couldn't update configuration file '%s'"
+msgstr ""
+
+#: zgcp/configEd.py:442
+msgid "Can't clone this node"
+msgstr ""
+
+#: zgcp/configEd.py:474
+msgid "Node '%s' already exists"
+msgstr ""
+
+#: zgcp/configEd.py:531
+msgid "Can't delete this node"
+msgstr ""
+
+#: zgcp/configEd.py:558
+msgid "This is the last node of its type, not deleting"
+msgstr ""
+
+#: zgcp/configEd.py:596
+msgid "Importing pupil data"
+msgstr ""
+
+#: zgcp/configEd.py:604
+msgid "Image Folder"
+msgstr ""
+
+#: zgcp/controlPanel.py:91
+msgid "User name problem"
+msgstr ""
+
+#: zgcp/controlPanel.py:92
+msgid "User '%1' already exists. Try to recreate?"
+msgstr ""
+
+#: zgcp/controlPanel.py:102
+msgid "Database Problem: Couldn't create user '%1'"
+msgstr ""
+
+#: zgcp/controlPanel.py:142
+msgid "No data source"
+msgstr ""
+
+#: zgcp/controlPanel.py:146
+msgid "%d files containing errors found"
+msgstr ""
+
+#: zgcp/controlPanel.py:151
+msgid "The supplied configuration file (%s) could not be opened. Actually this shouldn't be possible!"
+msgstr ""
+
+#: zgcp/controlPanel.py:184 zgcp/controlPanel.py:557
+msgid "New database '%1' created, now read in the data"
+msgstr ""
+
+#: zgcp/controlPanel.py:187
+msgid "Create New Database"
+msgstr ""
+
+#: zgcp/controlPanel.py:199 zgcp/controlPanel.py:573
+msgid "Couldn't create new database (%1)"
+msgstr ""
+
+#: zgcp/controlPanel.py:226
+msgid "Database name does not match data folder"
+msgstr ""
+
+#: zgcp/controlPanel.py:238
+msgid "New backup file '%1' created, now read in the data"
+msgstr ""
+
+#: zgcp/controlPanel.py:240 zgcp/controlPanel.py:463
+msgid "Create Backup File"
+msgstr ""
+
+#: zgcp/controlPanel.py:246
+msgid "Updating database '%1' from %2"
+msgstr ""
+
+#: zgcp/controlPanel.py:249
+msgid "Updating Master Database"
+msgstr ""
+
+#: zgcp/controlPanel.py:254
+msgid "Update failed, trying to restore from '%1'"
+msgstr ""
+
+#: zgcp/controlPanel.py:268
+msgid "Database '%1' cleared, now restore the data"
+msgstr ""
+
+#: zgcp/controlPanel.py:271 zgcp/controlPanel.py:560
+msgid "Restore Database"
+msgstr ""
+
+#: zgcp/controlPanel.py:360
+msgid "Delete Database?"
+msgstr ""
+
+#: zgcp/controlPanel.py:361
+msgid "Do you really want to delete database '%1'?"
+msgstr ""
+
+#: zgcp/controlPanel.py:379
+msgid ""
+"Couldn't delete database '%1'.\n"
+" Try again ..."
+msgstr ""
+
+#: zgcp/controlPanel.py:432
+msgid "Invalid operation on finalized database."
+msgstr ""
+
+#: zgcp/controlPanel.py:438
+msgid ""
+"Passwords reset to '%1' for users:\n"
+"  %2"
+msgstr ""
+
+#: zgcp/controlPanel.py:453
+msgid "Destination Folder"
+msgstr ""
+
+#: zgcp/controlPanel.py:461
+msgid "New backup file '%1' opened, now write in the data"
+msgstr ""
+
+#: zgcp/controlPanel.py:475
+msgid "Database Folder"
+msgstr ""
+
+#: zgcp/controlPanel.py:485
+msgid "Source File"
+msgstr ""
+
+#: zgcp/controlPanel.py:486
+msgid "Backup Files"
+msgstr ""
+
+#: zgcp/controlPanel.py:494
+msgid ""
+"Creating multiple user database files ...\n"
+msgstr ""
+
+#: zgcp/controlPanel.py:498
+msgid "Database file '%1' created, now read in the data"
+msgstr ""
+
+#: zgcp/controlPanel.py:501
+msgid "Create User Database File"
+msgstr ""
+
+#: zgcp/controlPanel.py:503
+msgid "Create Full Database Dump File"
+msgstr ""
+
+#: zgcp/controlPanel.py:539
+msgid "Replace Database?"
+msgstr ""
+
+#: zgcp/controlPanel.py:540
+msgid "Are you sure you want to replace database '%1'?"
+msgstr ""
+
+#: zgcp/controlPanel.py:594
+msgid "Finalize Database?"
+msgstr ""
+
+#: zgcp/controlPanel.py:595
+msgid ""
+"Finalizing stops teachers' access to the database.\n"
+"It may also clear their passwords.\n"
+"  Continue?"
+msgstr ""
+
+#: zgcp/controlPanel.py:659
+msgid "User database file"
+msgstr ""
+
+#: zgcp/controlPanel.py:662
+msgid "Report Files"
+msgstr ""
+
+#: zgcp/controlPanel.py:675
+msgid "%s: Database name does not match current master name"
+msgstr ""
+
+#: zgcp/controlPanel.py:689
+msgid "Couldn't remove user '%1'"
+msgstr ""
+
+#: zgcp/controlPanel.py:703
+msgid "Parent Folder"
+msgstr ""
+
+#: zgcp/controlPanel.py:707
+msgid "'%1' already exists"
+msgstr ""
+
+#: zgcp/controlPanel.py:711
+msgid "Couldn't open '%s' for writing"
+msgstr ""
+
+#: zgcp/controlPanel.py:717
+msgid "Configuration saved to '%s'"
+msgstr ""
+
+#: zgcp/controlPanel.py:739
+msgid ""
+"***************\n"
+"Database files could not be created for:\n"
+"  %s"
+msgstr ""
+
+#: zgcp/csv2sini.py:44
+msgid "Folder: csv-files"
+msgstr ""
+
+#: zgcp/csv2sini.py:63
+msgid "Ignoring '%s'"
+msgstr ""
+
+#: zgcp/csv2sini.py:69
+msgid "ERROR: There is no class with tag '%s'"
+msgstr ""
+
+#: zgcp/csv2sini.py:77
+msgid "Reloading pupil information can lead to loss or mixing up of reports. Continue?"
+msgstr ""
+
+#: zgcp/csv2sini.py:82
+msgid "Removing all pupils from class '%s'"
+msgstr ""
+
+#: zgcp/csv2sini.py:89
+msgid "Fetching pupils from file '%s'"
+msgstr ""
+
+#: zgcp/csv2sini.py:108
+msgid "ERROR: Insufficient columns at line %d"
+msgstr ""
+
+#: zgcp/csv2sini.py:130
+msgid ""
+"Imported %d pupils\n"
+msgstr ""
+
+#: zgcp/dataDefinition.py:73
+msgid "Folder containing image (picture) files used in the reports"
+msgstr ""
+
+#: zgcp/dataDefinition.py:74
+msgid "Folder containing teachers signatures as images"
+msgstr ""
+
+#: zgcp/dataDefinition.py:75 zgcp/dataDefinition.py:78
+msgid "An image file (svg-format)"
+msgstr ""
+
+#: zgcp/dataDefinition.py:81
+msgid "Folder containing layout definitions"
+msgstr ""
+
+#: zgcp/dataDefinition.py:82
+msgid "Folder containing a single layout definition"
+msgstr ""
+
+#: zgcp/dataDefinition.py:84
+msgid "Font definitions"
+msgstr ""
+
+#: zgcp/dataDefinition.py:85
+msgid "A single font definition"
+msgstr ""
+
+#: zgcp/dataDefinition.py:87
+msgid "The name of the font family, e.g. 'DejaVu Sans'"
+msgstr ""
+
+#: zgcp/dataDefinition.py:89
+msgid "Font size in points"
+msgstr ""
+
+#: zgcp/dataDefinition.py:91
+msgid "Font weight (0-100)"
+msgstr ""
+
+#: zgcp/dataDefinition.py:93
+msgid "Stretch factor, unstretched is 1.0"
+msgstr ""
+
+#: zgcp/dataDefinition.py:95
+msgid "Use italic/sloped style (boolean)"
+msgstr ""
+
+#: zgcp/dataDefinition.py:97
+msgid "Underlined font (boolean)"
+msgstr ""
+
+#: zgcp/dataDefinition.py:99
+msgid "Line spacing factor, normal is 1.0"
+msgstr ""
+
+#: zgcp/dataDefinition.py:101
+msgid "The colour of the font, in #rrggbb format, hex values"
+msgstr ""
+
+#: zgcp/dataDefinition.py:105
+msgid "Text object definitions"
+msgstr ""
+
+#: zgcp/dataDefinition.py:106
+msgid "A single text object definition"
+msgstr ""
+
+#: zgcp/dataDefinition.py:108
+msgid "The font for this text"
+msgstr ""
+
+#: zgcp/dataDefinition.py:110
+msgid "The text to display"
+msgstr ""
+
+#: zgcp/dataDefinition.py:114
+msgid "Line object definitions"
+msgstr ""
+
+#: zgcp/dataDefinition.py:115
+msgid "A single line object definition"
+msgstr ""
+
+#: zgcp/dataDefinition.py:117
+msgid "The thickness of the line"
+msgstr ""
+
+#: zgcp/dataDefinition.py:119
+msgid "The colour of the line, in #rrggbb format, hex values"
+msgstr ""
+
+#: zgcp/dataDefinition.py:121
+msgid "Starting x-coordinate"
+msgstr ""
+
+#: zgcp/dataDefinition.py:123
+msgid "Ending x-coordinate"
+msgstr ""
+
+#: zgcp/dataDefinition.py:125
+msgid "Starting y-coordinate"
+msgstr ""
+
+#: zgcp/dataDefinition.py:127
+msgid "Ending y-coordinate"
+msgstr ""
+
+#: zgcp/dataDefinition.py:131
+msgid "Image object definitions"
+msgstr ""
+
+#: zgcp/dataDefinition.py:132
+msgid "A single image object definition"
+msgstr ""
+
+#: zgcp/dataDefinition.py:134
+msgid "The file (in the 'imagefiles' folder) containing this image"
+msgstr ""
+
+#: zgcp/dataDefinition.py:136
+msgid "The vertical size of this image"
+msgstr ""
+
+#: zgcp/dataDefinition.py:140
+msgid "Frame configuration information"
+msgstr ""
+
+#: zgcp/dataDefinition.py:141
+msgid "A single frame definition"
+msgstr ""
+
+#: zgcp/dataDefinition.py:143
+msgid "Space above report text"
+msgstr ""
+
+#: zgcp/dataDefinition.py:145
+msgid "Space below report text"
+msgstr ""
+
+#: zgcp/dataDefinition.py:147
+msgid "Indentation of first text line"
+msgstr ""
+
+#: zgcp/dataDefinition.py:149
+msgid "Indentation relative to title (boolean)"
+msgstr ""
+
+#: zgcp/dataDefinition.py:151
+msgid "Format string for title"
+msgstr ""
+
+#: zgcp/dataDefinition.py:153
+msgid "The title is placed at the right of the frame (boolean)"
+msgstr ""
+
+#: zgcp/dataDefinition.py:155
+msgid "The title is shown even in empty frames (boolean)"
+msgstr ""
+
+#: zgcp/dataDefinition.py:157
+msgid "x-offset of title (relative to chosen margin)"
+msgstr ""
+
+#: zgcp/dataDefinition.py:159
+msgid "y-offset of title"
+msgstr ""
+
+#: zgcp/dataDefinition.py:161
+msgid "Height of signature image, '0' implies don't use image"
+msgstr ""
+
+#: zgcp/dataDefinition.py:163
+msgid "The image is placed at the left of the frame (boolean)"
+msgstr ""
+
+#: zgcp/dataDefinition.py:165
+msgid "x-offset for image"
+msgstr ""
+
+#: zgcp/dataDefinition.py:167
+msgid "y-offset for image"
+msgstr ""
+
+#: zgcp/dataDefinition.py:169
+msgid "Format string for teacher's name"
+msgstr ""
+
+#: zgcp/dataDefinition.py:171
+msgid "The name is placed at the left of the frame (boolean)"
+msgstr ""
+
+#: zgcp/dataDefinition.py:173
+msgid "The name is placed at the bottom of the frame (boolean)"
+msgstr ""
+
+#: zgcp/dataDefinition.py:175
+msgid "Teacher's name is displayed regardless of image (boolean)"
+msgstr ""
+
+#: zgcp/dataDefinition.py:177
+msgid "Teacher's name is displayed in all frames, else at most one (boolean)"
+msgstr ""
+
+#: zgcp/dataDefinition.py:179
+msgid "x-offset of name (relative to chosen margin)"
+msgstr ""
+
+#: zgcp/dataDefinition.py:181
+msgid "y-offset of name (relative to chosen margin)"
+msgstr ""
+
+#: zgcp/dataDefinition.py:183
+msgid "Height of frame"
+msgstr ""
+
+#: zgcp/dataDefinition.py:185
+msgid "Minimum height of frame"
+msgstr ""
+
+#: zgcp/dataDefinition.py:187
+msgid "Select behaviour when no report for a subject is available: Skip, Title, Empty, StrikeOut"
+msgstr ""
+
+#: zgcp/dataDefinition.py:191
+msgid "Display information for subjects"
+msgstr ""
+
+#: zgcp/dataDefinition.py:192
+msgid "Information for a single subject"
+msgstr ""
+
+#: zgcp/dataDefinition.py:194
+msgid "The name which is displayed for this subject"
+msgstr ""
+
+#: zgcp/dataDefinition.py:196
+msgid "These frames contain the given subject"
+msgstr ""
+
+#: zgcp/dataDefinition.py:200
+msgid "Subject-block object definitions"
+msgstr ""
+
+#: zgcp/dataDefinition.py:201
+msgid "Information for a single subject-block"
+msgstr ""
+
+#: zgcp/dataDefinition.py:203
+msgid "The line to separate reports, '0' => none"
+msgstr ""
+
+#: zgcp/dataDefinition.py:205
+msgid "Vertical space for block"
+msgstr ""
+
+#: zgcp/dataDefinition.py:207
+msgid "List of subjects to put in this block, if they fit"
+msgstr ""
+
+#: zgcp/dataDefinition.py:211
+msgid "Folder containing sheet definitions"
+msgstr ""
+
+#: zgcp/dataDefinition.py:212
+msgid "Single sheet definition"
+msgstr ""
+
+#: zgcp/dataDefinition.py:213
+msgid "The paper size"
+msgstr ""
+
+#: zgcp/dataDefinition.py:217
+msgid "Folder containing page definitions"
+msgstr ""
+
+#: zgcp/dataDefinition.py:218
+msgid "Single page definition"
+msgstr ""
+
+#: zgcp/dataDefinition.py:219
+msgid "General information about the page"
+msgstr ""
+
+#: zgcp/dataDefinition.py:221
+msgid "Which sheet of the complete report"
+msgstr ""
+
+#: zgcp/dataDefinition.py:223
+msgid "Which side of the sheet (boolean)"
+msgstr ""
+
+#: zgcp/dataDefinition.py:225
+msgid "Horizontal offset of page area"
+msgstr ""
+
+#: zgcp/dataDefinition.py:227
+msgid "Which page position on sheet (A3 only)"
+msgstr ""
+
+#: zgcp/dataDefinition.py:230
+msgid "Individual object placement on the page"
+msgstr ""
+
+#: zgcp/dataDefinition.py:232
+msgid "Type of object and its identifier: <type>/<id>"
+msgstr ""
+
+#: zgcp/dataDefinition.py:234
+msgid "x-coordinate of item"
+msgstr ""
+
+#: zgcp/dataDefinition.py:236
+msgid "y-coordinate of item"
+msgstr ""
+
+#: zgcp/dataDefinition.py:241
+msgid "Data concerning the whole document"
+msgstr ""
+
+#: zgcp/dataDefinition.py:243
+msgid "Individual pages in rendering order"
+msgstr ""
+
+#: zgcp/dataDefinition.py:245
+msgid "The width of the layout page"
+msgstr ""
+
+#: zgcp/dataDefinition.py:247
+msgid "The height of the layout page"
+msgstr ""
+
+#: zgcp/dataDefinition.py:249
+msgid "Top margin, y-axis offset"
+msgstr ""
+
+#: zgcp/dataDefinition.py:251
+msgid "Width of content area"
+msgstr ""
+
+#: zgcp/dataDefinition.py:253
+msgid "Height of content area"
+msgstr ""
+
+#: zgcp/dataDefinition.py:255
+msgid "Font for report texts"
+msgstr ""
+
+#: zgcp/dataDefinition.py:257
+msgid "Text indentation (whole paragraph)"
+msgstr ""
+
+#: zgcp/dataDefinition.py:259
+msgid "Additional indentation for first line of paragraph"
+msgstr ""
+
+#: zgcp/dataDefinition.py:261
+msgid "Font for 'special' text"
+msgstr ""
+
+#: zgcp/dataDefinition.py:263
+msgid "Default indentation of special text"
+msgstr ""
+
+#: zgcp/dataDefinition.py:265
+msgid "Font for title"
+msgstr ""
+
+#: zgcp/dataDefinition.py:267
+msgid "Font for teacher's name"
+msgstr ""
+
+#: zgcp/dataDefinition.py:269
+msgid "Full justification (boolean)"
+msgstr ""
+
+#: zgcp/dataDefinition.py:275
+msgid "Data concerning the whole system"
+msgstr ""
+
+#: zgcp/dataDefinition.py:277
+msgid "School-year, as it should appear in the reports"
+msgstr ""
+
+#: zgcp/dataDefinition.py:279
+msgid "Network-address of the master database"
+msgstr ""
+
+#: zgcp/dataDefinition.py:281
+msgid "The name of the dictionary for spell-checking, e.g. 'de_DE' for German"
+msgstr ""
+
+#: zgcp/dataDefinition.py:283
+msgid "Special, non-ASCII, characters (language-dependent)"
+msgstr ""
+
+#: zgcp/dataDefinition.py:286
+msgid "Information about the teachers"
+msgstr ""
+
+#: zgcp/dataDefinition.py:287
+msgid "Individual teacher information"
+msgstr ""
+
+#: zgcp/dataDefinition.py:289
+msgid "The teacher's (real) name"
+msgstr ""
+
+#: zgcp/dataDefinition.py:293
+msgid "Folder containing class information"
+msgstr ""
+
+#: zgcp/dataDefinition.py:294
+msgid "Folder containing information for a single class"
+msgstr ""
+
+#: zgcp/dataDefinition.py:295
+msgid "General information about the class"
+msgstr ""
+
+#: zgcp/dataDefinition.py:297
+msgid "The actual (displayed) name for the class"
+msgstr ""
+
+#: zgcp/dataDefinition.py:299
+msgid "The layout definition to be used for this class"
+msgstr ""
+
+#: zgcp/dataDefinition.py:301
+msgid "Last automatically allocated pupil id. In general, don't touch it!"
+msgstr ""
+
+#: zgcp/dataDefinition.py:305
+msgid "Information about the courses taught"
+msgstr ""
+
+#: zgcp/dataDefinition.py:306
+msgid "Information about a single course"
+msgstr ""
+
+#: zgcp/dataDefinition.py:308
+msgid "Teacher's 'tag' (short identifier)"
+msgstr ""
+
+#: zgcp/dataDefinition.py:310
+msgid "The teaching group (class subset)"
+msgstr ""
+
+#: zgcp/dataDefinition.py:314
+msgid "Information about the pupils"
+msgstr ""
+
+#: zgcp/dataDefinition.py:315
+msgid "Information about a single pupil"
+msgstr ""
+
+#: zgcp/dataDefinition.py:317
+msgid "Pupil's surname"
+msgstr ""
+
+#: zgcp/dataDefinition.py:319
+msgid "Pupil's forenames"
+msgstr ""
+
+#: zgcp/dataDefinition.py:321
+msgid "Pupil's date of birth"
+msgstr ""
+
+#: zgcp/dataDefinition.py:323
+msgid "Pupil's place of birth"
+msgstr ""
+
+#: zgcp/dataDefinition.py:325
+msgid "The teaching groups (class subsets), space-separated"
+msgstr ""
+
+#: zgcp/dataDefinition.py:343
+msgid "No specification for path '%s'"
+msgstr ""
+
+#: zgcp/dbInit.py:32
+msgid ""
+"Welcome to the Zeugs initialization utility.\n"
+"This will set up a control database on your PostgreSQL server.You should only need to run this once to prepare the database server for use with Zeugs."
+msgstr ""
+
+#: zgcp/dbInit.py:53
+msgid "Connecting to postgres@%s"
+msgstr ""
+
+#: zgcp/dbInit.py:59
+msgid "Couldn't open 'postgres' database"
+msgstr ""
+
+#: zgcp/dbInit.py:62
+msgid "Checking existing databases"
+msgstr ""
+
+#: zgcp/dbInit.py:66
+msgid "Remove Control Database?"
+msgstr ""
+
+#: zgcp/dbInit.py:67
+msgid "The control database (%s) already exists. Should it be removed, with everything it contains?"
+msgstr ""
+
+#: zgcp/dbInit.py:85 zgcp/dbInit.py:89
+msgid "Removing database '%s'"
+msgstr ""
+
+#: zgcp/dbInit.py:95
+msgid ""
+"Couldn't remove old data - summon a PostgreSQL expert:\n"
+"%s"
+msgstr ""
+
+#: zgcp/dbInit.py:98
+msgid "Trying to remove users ..."
+msgstr ""
+
+#: zgcp/dbInit.py:102 zgcp/dbInit.py:106 zgcp/dbInit.py:111
+msgid "  ... couldn't remove user '%s'"
+msgstr ""
+
+#: zgcp/dbInit.py:113
+msgid ""
+"\n"
+"Creating control database"
+msgstr ""
+
+#: zgcp/dbInit.py:121 zgcp/guiCP.py:67
+msgid "Couldn't open control database"
+msgstr ""
+
+#: zgcp/dbInit.py:128
+msgid ""
+"Couldn't set up the '%s' database. Please try again:\n"
+"%s"
+msgstr ""
+
+#: zgcp/dbInit.py:131
+msgid ""
+"\n"
+"Success! The control database is ready."
+msgstr ""
+
+#: zgcp/dbInit.py:132
+msgid "  Now use the control panel (zgcp) to set up report databases."
+msgstr ""
+
+#: zgcp/dbInit.py:144
+msgid "The administrative user '%s' will now be created. Please enter a difficult-to-guess password"
+msgstr ""
+
+#: zgcp/guiCsvConfig.py:54
+msgid "Enter the column numbers for the data in your csv files. If a field is not present in the csv file, set the column to 0."
+msgstr ""
+
+#: zgcp/makeMaster.py:70
+msgid "created 'config' table"
+msgstr ""
+
+#: zgcp/makeMaster.py:72
+msgid "updated 'config' table"
+msgstr ""
+
+#: zgcp/makeMaster.py:76
+msgid "(re)created interface table"
+msgstr ""
+
+#: zgcp/makeMaster.py:82
+msgid "creating/updating reports tables"
+msgstr ""
+
+#: zgcp/makeMaster.py:128
+msgid "Deleting report %1"
+msgstr ""
+
+#: zgcp/makeMaster.py:133
+msgid "... made %1"
+msgstr ""
+
+#: zgcp/makeMaster.py:135
+msgid "Creating initial reports"
+msgstr ""
+
+#: zgcp/makeMaster.py:143
+msgid "... removing %1"
+msgstr ""
+
+#: zgcp/verify.py:77
+msgid "BUG - Unknown verification test, '%s'"
+msgstr ""
+
+#: zgcp/verify.py:89
+msgid "Invalid 'integer' value"
+msgstr ""
+
+#: zgcp/verify.py:100
+msgid "Invalid 'real' value"
+msgstr ""
+
+#: zgcp/verify.py:105
+msgid "Invalid 'boolean' value"
+msgstr ""
+
+#: zgcp/verify.py:110
+msgid "Invalid 'colour' value"
+msgstr ""
+
+#: zgcp/verify.py:116
+msgid "Must be one of %s"
+msgstr ""
+
+#: zgcp/verify.py:135
+msgid "Referenced item not defined"
+msgstr ""
+
+#: zgcp/verify.py:148
+msgid ""
+"Page has no definition: '%s'\n"
+msgstr ""
+
+#: zgcp/verify.py:173
+msgid "Subject not found in 'subject_frames' folder"
+msgstr ""
+
+#: zgcp/verify.py:175
+msgid ""
+"Insufficient frames for subject (%s)\n"
+msgstr ""
+
+#: zgcp/verify.py:178
+msgid ""
+"Invalid subject (%s) in subject block\n"
+msgstr ""
+
+#: zgcp/verify.py:187
+msgid "Font not available: %s"
+msgstr ""
+
+#: zgcp/verify.py:272
+msgid "Unknown node type -'%s'"
+msgstr ""
+
+#: zgedit/editorView.py:128
+msgid "No database file open"
+msgstr ""
+
+#: zgedit/editorView.py:167
+msgid "Database file '%s' contains invalid data"
+msgstr ""
+
+#: zgedit/editorView.py:184
+msgid "This is a master database - editing is not permitted"
+msgstr ""
+
+#: zgedit/editorView.py:535
+msgid "No pages to print"
+msgstr ""
+
+#: zgedit/editorView.py:559
+msgid "Print to pdf-file"
+msgstr ""
+
+#: zgedit/editorView.py:562
+msgid "pdf Files"
+msgstr ""
+
+#: zgedit/guiEditor.py:95
+msgid "incomplete"
+msgstr ""
+
+#: zgedit/guiEditor.py:96
+msgid "complete"
+msgstr ""
+
+#: zgedit/guiEditor.py:169
+msgid "zgedit - Waldorf report editor   (%1)"
+msgstr ""
+
+#: zgedit/layoutUnits.py:156
+msgid "Class %1"
+msgstr ""
+
+#: zgedit/layoutUnits.py:158
+msgid "page %1 of %2"
+msgstr ""
+
+#: zgprint/guiPrint.py:89
+msgid "zgprint - Waldorf report printer   (%1)"
+msgstr ""
+
+#: zgprint/layoutReport.py:152
+msgid ""
+"Invalid item for print rendering on page %1:\n"
+"  %2"
+msgstr ""
+
+#: zgprint/layoutReport.py:325
+msgid "Invalid subject (%s) in blocks subject list"
+msgstr ""
+
+#: zgprint/printView.py:123
+msgid "No 'pages' definition in layout section 'document'"
+msgstr ""
+
+#: zgprint/printView.py:206
+msgid "pdf: folder for class folders"
+msgstr ""
+
+#: zgprint/printView.py:223
+msgid "Printing report for %1"
+msgstr ""
+
+#: zgprint/printView.py:261
+msgid "  --- page %s"
+msgstr ""
+
+#: zgprint/printView.py:264
+msgid "  --- sheet %s"
+msgstr ""
+
+#: zgprint/printView.py:272
+msgid "No page with name '%1'"
+msgstr ""
+
+#: zgprint/printView.py:287
+msgid " *** DONE ***"
+msgstr ""
+
+#: zgsync/synchronize.py:75
+msgid "User Database File"
+msgstr ""
+
+#: zgsync/synchronize.py:90
+msgid "Synchronize %s"
+msgstr ""
+
+#: zgsync/synchronize.py:100
+msgid "'%s' is not a teacher's database file"
+msgstr ""
+
+#: zgsync/synchronize.py:120
+msgid "Password changed"
+msgstr ""
+
+#: zgsync/synchronize.py:122
+msgid "Couldn't change password"
+msgstr ""
+
+#: zgsync/synchronize.py:132
+msgid "This database is finalized, you can't access it"
+msgstr ""
+
+#: zgsync/synchronize.py:158
+msgid "Couldn't open master database"
+msgstr ""
+
+#: zgsync/synchronize.py:183
+msgid "The database file (%1) is being used by another application"
+msgstr ""
+
+#: zgsync/synchronize.py:187
+msgid "You should install 'lsof' so that usage of the file can be tested"
+msgstr ""
+
+#: zgsync/synchronize.py:196
+msgid ""
+"Couldn't rename the database file (%1).\n"
+"Is it being used by another application?"
+msgstr ""
+
+#: zgsync/synchronize.py:201
+msgid "Database file renamed to %s"
+msgstr ""
+
+#: zgsync/synchronize.py:212
+msgid "%1: Owning teacher (%2) not known to master database"
+msgstr ""
+
+#: zgsync/synchronize.py:216
+msgid "Copying reports from user database to master"
+msgstr ""
+
+#: zgsync/synchronize.py:234
+msgid "Invalid report, not updated : %s"
+msgstr ""
+
+#: zgsync/synchronize.py:237
+msgid "Report update problem"
+msgstr ""
+
+#: zgsync/synchronize.py:238
+msgid ""
+"Master version of report has been updated since this client was last synchronized.\n"
+"   Replace that version of '%s'?"
+msgstr ""
+
+#: zgsync/synchronize.py:241
+msgid "Revised master version of report '%s' overwritten"
+msgstr ""
+
+#: zgsync/synchronize.py:244
+msgid "Revised master version of report '%s' not overwritten"
+msgstr ""
+
+#: zgsync/synchronize.py:261
+msgid "Couldn't update report '%s'"
+msgstr ""
+
+#: zgsync/synchronize.py:263
+msgid "Transferred %d reports"
+msgstr ""
+
+#: zgsync/synchronize.py:274
+msgid "Recreating the user database"
+msgstr ""
+
+#: zgsync/synchronize.py:288
+msgid ""
+"Master database is in unstable state.\n"
+"  Waiting ..."
+msgstr ""
+
+#: zgsync/synchronize.py:296
+msgid "Couldn't create database file in folder %1, select new folder"
+msgstr ""
+
+#: zgsync/synchronize.py:300
+msgid "Abandon?"
+msgstr ""
+
+#: zgsync/synchronize.py:301
+msgid "User database not regenerated, do you really want to abandon this operation?"
+msgstr ""
+
+#: zgsync/synchronize.py:313
+msgid ""
+"\n"
+"SUCCESS! - User database regenerated"
+msgstr ""
+
+#: zgsync/synchronize.py:315
+msgid ""
+"Master has been updated, need to repeat...\n"
+msgstr ""
+
+#: zgsync/synchronize.py:319
+msgid ""
+"\n"
+"FAILED! Couldn't regenerate user database.\n"
+" --- Please contact administrator!"
+msgstr ""
+
