@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: UTF-8 -*-
 
-#2007-08-29
+#2007-09-21
 # Copyright 2007 Michael Towers
 
 # This file is part of Zeugs.
@@ -222,11 +222,6 @@ def synchronize(dbm, filepath, gui):
     for id, data in dbs.read(u"SELECT * FROM reports"):
         # Split off the version data
         dver, drep = data.split(u"\n", 1)
-        if (dver <= ctime):
-            # Only consider reports updated since the generation of
-            # the database file
-            continue
-
         # Get the master version data
         try:
             mver = dbm.readValue(mtb, id).split(u"\n", 1)[0]
@@ -237,13 +232,18 @@ def synchronize(dbm, filepath, gui):
             if confirmationDialog(_("Report update problem"),
                     _("Master version of report has been updated"
                     " since this client was last synchronized.\n"
-                    "   Replace that version of '%s'?") % id, True):
+                    "   Replace that version of '%s'?") % id, False):
                 gui.report(_("Revised master version of report '%s'"
-                        " overwritten") % id)
+                        " will be overwritten") % id)
             else:
                 gui.report(_("Revised master version of report '%s'"
                         " not overwritten") % id)
                 continue
+
+        elif (dver <= mver):
+            # Only do anything if the local version is newer than the
+            # the master version
+            continue
 
         if (dver > mtime):
             # The new version has a time stamp later than the
