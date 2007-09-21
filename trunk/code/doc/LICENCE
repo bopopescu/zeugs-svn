@@ -1,0 +1,34 @@
+
+ Licence:
+
+   This software is Copyright 2007 Michael Towers.
+   It is released under the GNU GENERAL PUBLIC LICENSE.
+   See COPYING.
+
+   It uses the python programming language (http://www.python.org), which has
+   its own licence (the Python License), compatible with the GNU GPL.
+   
+   Also the following libraries are used:
+   
+   Qt4 (http://trolltech.com) - also under the GNU GPL licence
+   PyQt4 (http://www.riverbankcomputing.co.uk) - also under the GNU GPL licence
+   Enchant (http://www.abisource.com/projects/enchant) - under the GNU LGPL
+     licence (GNU LESSER GENERAL PUBLIC LICENSE)
+   PyEnchant (http://pyenchant.sourceforge.net) - also under the GNU LGPL licence
+     - dictionaries from http://www.openoffice.org are included, which - as
+       far as I can tell - are also under the GNU LGPL licence
+   psycopg2 (http://www.initd.org) - under the GNU GPL licence
+   sqlite (http://www.sqlite.org) - in the public domain
+
+   ... along with other libraries that come bundled with the above
+
+ Warranty:
+
+   This software is distributed with NO WARRANTY, use it at your own risk.
+
+ Author:
+
+   This software was written by
+   
+   Michael Towers <mt.42@web.de>
+   
