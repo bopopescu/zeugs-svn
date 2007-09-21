@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Zeugs 0.9\n"
-"POT-Creation-Date: 2007-09-17 21:22+CEST\n"
+"POT-Creation-Date: 2007-09-21 21:49+CEST\n"
 "PO-Revision-Date: 2007-08-23 16:56+0100\n"
 "Last-Translator: Michael Towers <mt.42@web.de>\n"
 "Language-Team: German <mt.42@web.de>\n"
@@ -790,7 +790,7 @@ msgstr "Fehler"
 msgid "Information"
 msgstr "Information"
 
-#: zgcommon/guiBase.py:78
+#: zgcommon/guiBase.py:89
 msgid "Font not available: '%s'"
 msgstr "Schriftart nicht installiert: '%s'"
 
@@ -1977,15 +1977,15 @@ msgstr "%1: Datenbank-Lehrer (%2) in der Hauptdatenbank unbekannt"
 msgid "Copying reports from user database to master"
 msgstr "Zeugnisse werden von 'reports' an die Hauptdatenbank übertragen"
 
-#: zgsync/synchronize.py:234
+#: zgsync/synchronize.py:229
 msgid "Invalid report, not updated : %s"
 msgstr "Ungültiges Zeugnis, nicht übertragen: %s"
 
-#: zgsync/synchronize.py:237
+#: zgsync/synchronize.py:232
 msgid "Report update problem"
 msgstr "Problem bei der Zeugnisaktualisierung"
 
-#: zgsync/synchronize.py:238
+#: zgsync/synchronize.py:233
 msgid ""
 "Master version of report has been updated since this client was last "
 "synchronized.\n"
@@ -1995,11 +1995,11 @@ msgstr ""
 "in der Hauptdatenbank geändert.\n"
 "   Diese Version überschreiben?"
 
-#: zgsync/synchronize.py:241
-msgid "Revised master version of report '%s' overwritten"
-msgstr "Zeugnis '%s' in Hauptdatenbank überschrieben"
+#: zgsync/synchronize.py:236
+msgid "Revised master version of report '%s' will be overwritten"
+msgstr "Zeugnis '%s' in Hauptdatenbank wird überschrieben"
 
-#: zgsync/synchronize.py:244
+#: zgsync/synchronize.py:239
 msgid "Revised master version of report '%s' not overwritten"
 msgstr "Zeugnis '%s' in Hauptdatenbank nicht überschrieben"
 

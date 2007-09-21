@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2007-09-17 21:22+CEST\n"
+"POT-Creation-Date: 2007-09-21 21:49+CEST\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -780,7 +780,7 @@ msgstr ""
 msgid "Information"
 msgstr ""
 
-#: zgcommon/guiBase.py:78
+#: zgcommon/guiBase.py:89
 msgid "Font not available: '%s'"
 msgstr ""
 
@@ -1895,25 +1895,25 @@ msgstr ""
 msgid "Copying reports from user database to master"
 msgstr ""
 
-#: zgsync/synchronize.py:234
+#: zgsync/synchronize.py:229
 msgid "Invalid report, not updated : %s"
 msgstr ""
 
-#: zgsync/synchronize.py:237
+#: zgsync/synchronize.py:232
 msgid "Report update problem"
 msgstr ""
 
-#: zgsync/synchronize.py:238
+#: zgsync/synchronize.py:233
 msgid ""
 "Master version of report has been updated since this client was last synchronized.\n"
 "   Replace that version of '%s'?"
 msgstr ""
 
-#: zgsync/synchronize.py:241
-msgid "Revised master version of report '%s' overwritten"
+#: zgsync/synchronize.py:236
+msgid "Revised master version of report '%s' will be overwritten"
 msgstr ""
 
-#: zgsync/synchronize.py:244
+#: zgsync/synchronize.py:239
 msgid "Revised master version of report '%s' not overwritten"
 msgstr ""
 
