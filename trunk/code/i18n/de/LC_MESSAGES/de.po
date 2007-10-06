@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Zeugs 0.9\n"
-"POT-Creation-Date: 2007-09-21 21:49+CEST\n"
+"POT-Creation-Date: 2007-10-06 17:50+CEST\n"
 "PO-Revision-Date: 2007-08-23 16:56+0100\n"
 "Last-Translator: Michael Towers <mt.42@web.de>\n"
 "Language-Team: German <mt.42@web.de>\n"
@@ -682,11 +682,11 @@ msgstr "Die Datei '%s' existiert schon. Löschen?"
 msgid "Couldn't delete file '%s'"
 msgstr "Datei '%s' konnte nicht gelöscht werden"
 
-#: zgcommon/backup.py:101 zgcommon/backup.py:247
+#: zgcommon/backup.py:101 zgcommon/backup.py:255
 msgid "Creating table '%s'"
 msgstr "Tabelle '%s' wird erzeugt"
 
-#: zgcommon/backup.py:105 zgcommon/backup.py:250
+#: zgcommon/backup.py:105 zgcommon/backup.py:258
 msgid "Creating table 'data'"
 msgstr "Tabelle 'data' wird erzeugt"
 
@@ -694,29 +694,33 @@ msgstr "Tabelle 'data' wird erzeugt"
 msgid "Copying reports ..."
 msgstr "Zeugnisse werden kopiert ..."
 
-#: zgcommon/backup.py:165 zgcommon/backup.py:280 zgcp/makeMaster.py:94
+#: zgcommon/backup.py:163
+msgid "Copying out to file"
+msgstr "Die Daten werden zur Datei ausgeschrieben"
+
+#: zgcommon/backup.py:172 zgcommon/backup.py:288 zgcp/makeMaster.py:94
 msgid "DONE!"
 msgstr "FERTIG!"
 
-#: zgcommon/backup.py:170
+#: zgcommon/backup.py:177
 msgid "Couldn't create database file. Removing incomplete file (%1)"
 msgstr ""
 "Zeugnisdatenbank konnte nicht erzuegt werden. Unvollständige Datei (%1) wird "
 "entfernt"
 
-#: zgcommon/backup.py:185 zgcommon/backup.py:295
+#: zgcommon/backup.py:193 zgcommon/backup.py:303
 msgid "Couldn't create table '%1'"
 msgstr "Tabelle '%1' konnte nicht erzuegt werden"
 
-#: zgcommon/backup.py:255
+#: zgcommon/backup.py:263
 msgid "Created interface table"
 msgstr "'interface'-Tabelle wurde erzeugt"
 
-#: zgcommon/backup.py:258
+#: zgcommon/backup.py:266
 msgid "Creating teacher report tables ..."
 msgstr "Zeugnistabellen werden erzeugt ..."
 
-#: zgcommon/backup.py:284
+#: zgcommon/backup.py:292
 msgid "Couldn't restore database"
 msgstr "Datenbank konnte nicht wieder hergestellt werden"
 

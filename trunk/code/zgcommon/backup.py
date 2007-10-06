@@ -1,6 +1,6 @@
 # -*- coding: UTF-8 -*-
 
-#2007-09-11
+#2007-10-06
 # Copyright 2007 Michael Towers
 
 # This file is part of Zeugs.
@@ -86,7 +86,7 @@ class Dump:
             self.filepath = None
             return
         # Create/open database file
-        self.dbs = DBn(self.filepath, new=True)
+        self.dbs = DBn(":memory:", new=True)
 
         if not self.dbs.isOpen():
             self.filepath = None
@@ -160,6 +160,13 @@ class Dump:
                 self.dbm.send(u"""UPDATE config SET value = ?
                     WHERE id = 'backuptime'""", (self.ctime,))
 
+            gui.report(_("Copying out to file"))
+            self.dbs.send(u"ATTACH '%s' AS extern" % self.filepath)
+            for t in self.dbs.read(u"""SELECT name FROM sqlite_master
+                    WHERE type='table'"""):
+                self.dbs.send(u"""CREATE TABLE extern.'%s' AS
+                        SELECT * FROM '%s'""" % (t[0], t[0]))
+            self.dbs.send(u"DETACH extern")
             self.dbs.close()
             self.dbs = None
             gui.report(_("DONE!"))
@@ -171,7 +178,8 @@ class Dump:
                     " Removing incomplete file (%1)"), (self.filepath,))
             if self.dbs.isOpen():
                 self.dbs.close()
-            os.remove(self.filepath)
+            if os.path.isfile(self.filepath):
+                os.remove(self.filepath)
             self.dbs = None
             self.filepath = None
 

@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2007-09-21 21:49+CEST\n"
+"POT-Creation-Date: 2007-10-06 17:50+CEST\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -681,11 +681,11 @@ msgstr ""
 msgid "Couldn't delete file '%s'"
 msgstr ""
 
-#: zgcommon/backup.py:101 zgcommon/backup.py:247
+#: zgcommon/backup.py:101 zgcommon/backup.py:255
 msgid "Creating table '%s'"
 msgstr ""
 
-#: zgcommon/backup.py:105 zgcommon/backup.py:250
+#: zgcommon/backup.py:105 zgcommon/backup.py:258
 msgid "Creating table 'data'"
 msgstr ""
 
@@ -693,27 +693,31 @@ msgstr ""
 msgid "Copying reports ..."
 msgstr ""
 
-#: zgcommon/backup.py:165 zgcommon/backup.py:280 zgcp/makeMaster.py:94
+#: zgcommon/backup.py:163
+msgid "Copying out to file"
+msgstr ""
+
+#: zgcommon/backup.py:172 zgcommon/backup.py:288 zgcp/makeMaster.py:94
 msgid "DONE!"
 msgstr ""
 
-#: zgcommon/backup.py:170
+#: zgcommon/backup.py:177
 msgid "Couldn't create database file. Removing incomplete file (%1)"
 msgstr ""
 
-#: zgcommon/backup.py:185 zgcommon/backup.py:295
+#: zgcommon/backup.py:193 zgcommon/backup.py:303
 msgid "Couldn't create table '%1'"
 msgstr ""
 
-#: zgcommon/backup.py:255
+#: zgcommon/backup.py:263
 msgid "Created interface table"
 msgstr ""
 
-#: zgcommon/backup.py:258
+#: zgcommon/backup.py:266
 msgid "Creating teacher report tables ..."
 msgstr ""
 
-#: zgcommon/backup.py:284
+#: zgcommon/backup.py:292
 msgid "Couldn't restore database"
 msgstr ""
 
