@@ -1,0 +1,20 @@
+build.sh is a script to build a Zeugs distribution package for Linux
+using PyInstaller.
+
+PyInstaller itself doesn't need to be installed, just unpack it somewhere
+convenient. Don't use version 1.3. If no later version is available, get it
+from SVN.
+
+Edit the script so that the paths 'pyinstallerPath' and 'dicPath' are set
+correctly (your dictionaries must be in a folder).
+In the supplied script, folder 'dictionaries' contains the desired
+dictionaries, both '.aff' and '.dic' parts.
+
+Then run the script as ./build.sh from its own directory.
+
+A folder 'distzeugs' will be produced, which is then tar.gzipped up for
+distribution into 'zeugs-linux-<version>.tar.gz'.
+
+The 'zeugs.sh' script should be used for starting the program (it sets
+the proper library path).
+
