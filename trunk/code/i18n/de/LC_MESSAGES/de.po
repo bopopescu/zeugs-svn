@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Zeugs 0.9\n"
-"POT-Creation-Date: 2007-10-06 17:50+CEST\n"
+"POT-Creation-Date: 2007-10-12 20:39+CEST\n"
 "PO-Revision-Date: 2007-08-23 16:56+0100\n"
 "Last-Translator: Michael Towers <mt.42@web.de>\n"
 "Language-Team: German <mt.42@web.de>\n"
@@ -306,6 +306,34 @@ msgstr "Annehmen"
 msgid "Progress report"
 msgstr "Fortschrittsanzeige"
 
+#: gui/ui_printPreview.py:136
+msgid "Print preview"
+msgstr "Druck-Vorschau"
+
+#: gui/ui_printPreview.py:137 gui/ui_zgedit.py:287
+msgid "Pupil"
+msgstr "SchülerIn"
+
+#: gui/ui_printPreview.py:138
+msgid "Page"
+msgstr "Seite"
+
+#: gui/ui_printPreview.py:139
+msgid "left"
+msgstr "links"
+
+#: gui/ui_printPreview.py:140
+msgid "right"
+msgstr "rechts"
+
+#: gui/ui_printPreview.py:141
+msgid "Done"
+msgstr "Fertig"
+
+#: gui/ui_printPreview.py:142
+msgid "size"
+msgstr "Größe"
+
 #: gui/ui_zgcp.py:256
 msgid "Zeugs Control Panel"
 msgstr "Zeugs Verwalten"
@@ -401,10 +429,6 @@ msgstr "Klasse"
 #: gui/ui_zgedit.py:286
 msgid "Subject"
 msgstr "Fach"
-
-#: gui/ui_zgedit.py:287
-msgid "Pupil"
-msgstr "SchülerIn"
 
 #: gui/ui_zgedit.py:288
 msgid "Previous pupil"
@@ -1895,31 +1919,31 @@ msgstr ""
 msgid "Invalid subject (%s) in blocks subject list"
 msgstr "Ungültiges Fach in Fachliste"
 
-#: zgprint/printView.py:123
+#: zgprint/printView.py:124
 msgid "No 'pages' definition in layout section 'document'"
 msgstr "Keine Definition für 'pages' im Layout-Abschnitt 'document'"
 
-#: zgprint/printView.py:206
+#: zgprint/printView.py:229
 msgid "pdf: folder for class folders"
 msgstr "pdf: Ordner für Klassenordner"
 
-#: zgprint/printView.py:223
+#: zgprint/printView.py:245
 msgid "Printing report for %1"
 msgstr "Zeugnis für %1 wird gedruckt"
 
-#: zgprint/printView.py:261
+#: zgprint/printView.py:282
 msgid "  --- page %s"
 msgstr "  --- Seite %s"
 
-#: zgprint/printView.py:264
+#: zgprint/printView.py:285
 msgid "  --- sheet %s"
 msgstr "  --- Blatt %s"
 
-#: zgprint/printView.py:272
+#: zgprint/printView.py:293
 msgid "No page with name '%1'"
 msgstr "Keine Seite hat Kennzeichen '%1'"
 
-#: zgprint/printView.py:287
+#: zgprint/printView.py:308
 msgid " *** DONE ***"
 msgstr " *** FERTIG ***"
 

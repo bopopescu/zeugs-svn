@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2007-10-06 17:50+CEST\n"
+"POT-Creation-Date: 2007-10-12 20:39+CEST\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -305,6 +305,34 @@ msgstr ""
 msgid "Progress report"
 msgstr ""
 
+#: gui/ui_printPreview.py:136
+msgid "Print preview"
+msgstr ""
+
+#: gui/ui_printPreview.py:137 gui/ui_zgedit.py:287
+msgid "Pupil"
+msgstr ""
+
+#: gui/ui_printPreview.py:138
+msgid "Page"
+msgstr ""
+
+#: gui/ui_printPreview.py:139
+msgid "left"
+msgstr ""
+
+#: gui/ui_printPreview.py:140
+msgid "right"
+msgstr ""
+
+#: gui/ui_printPreview.py:141
+msgid "Done"
+msgstr ""
+
+#: gui/ui_printPreview.py:142
+msgid "size"
+msgstr ""
+
 #: gui/ui_zgcp.py:256
 msgid "Zeugs Control Panel"
 msgstr ""
@@ -399,10 +427,6 @@ msgstr ""
 
 #: gui/ui_zgedit.py:286
 msgid "Subject"
-msgstr ""
-
-#: gui/ui_zgedit.py:287
-msgid "Pupil"
 msgstr ""
 
 #: gui/ui_zgedit.py:288
@@ -1817,31 +1841,31 @@ msgstr ""
 msgid "Invalid subject (%s) in blocks subject list"
 msgstr ""
 
-#: zgprint/printView.py:123
+#: zgprint/printView.py:124
 msgid "No 'pages' definition in layout section 'document'"
 msgstr ""
 
-#: zgprint/printView.py:206
+#: zgprint/printView.py:229
 msgid "pdf: folder for class folders"
 msgstr ""
 
-#: zgprint/printView.py:223
+#: zgprint/printView.py:245
 msgid "Printing report for %1"
 msgstr ""
 
-#: zgprint/printView.py:261
+#: zgprint/printView.py:282
 msgid "  --- page %s"
 msgstr ""
 
-#: zgprint/printView.py:264
+#: zgprint/printView.py:285
 msgid "  --- sheet %s"
 msgstr ""
 
-#: zgprint/printView.py:272
+#: zgprint/printView.py:293
 msgid "No page with name '%1'"
 msgstr ""
 
-#: zgprint/printView.py:287
+#: zgprint/printView.py:308
 msgid " *** DONE ***"
 msgstr ""
 

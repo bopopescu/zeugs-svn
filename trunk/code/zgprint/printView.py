@@ -1,6 +1,6 @@
 # -*- coding: UTF-8 -*-
 
-#2007-09-15
+#2007-10-12
 # Copyright 2007 Michael Towers
 
 # This file is part of Zeugs.
@@ -40,6 +40,7 @@ from layoutReport import LayoutReport
 from print_backend import Printer
 from guiDialogs import getDirectory
 from database import DB, selectDBFile, getBoolean
+from printPreview import PrintPreview
 import __builtin__
 
 import os.path
@@ -181,11 +182,33 @@ class PrintView:
     def slot_multiPages(self, arg):
         self.gui.setPages(self.multipages)
 
+    def getPupilList(self):
+        """Return a pair of lists:
+         - all checked pupils' names
+         - their ids
+        """
+        # Get a list of (name, id) pairs
+        pupilList = self.db.classObject.orderedPupilList
+        # And filter out unchecked ones
+        pil = []    # id list
+        pnl = []    # name list
+        for i in range(len(pupilList)):
+            if self.gui.isPupilChecked(i):
+                pnl.append(pupilList[i][0])
+                pil.append(pupilList[i][1])
+        return (pnl, pil)
+
     def slot_preview(self, arg):
-        warning("Not Yet Implemented")
+        pupilNames, pupilIds = self.getPupilList()
+        # individual, singlepage or multipage?
+        pageType = self.gui.pageType()
+        pages = [p[0] for p in self.gui.getPages() if p[1]]
+
+        PrintPreview(self.db, self.gui.settings, pupilNames, pupilIds,
+                pageType, self.sheetSides, pages, self.pages).exec_()
 
     def slot_print(self, arg):
-        pupilList = self.db.classObject.orderedPupilList
+        pupilNames, pupilIds = self.getPupilList()
         # individual, singlepage or multipage?
         pageType = self.gui.pageType()
 
@@ -212,70 +235,68 @@ class PrintView:
             if not os.path.isdir(cdir):
                 os.mkdir(cdir)
 
-        loopCnt = len(pupilList)
+        loopCnt = len(pupilNames)
         if reverse:             # pupil list index
             i = loopCnt - 1
         else:
             i = 0
         while (loopCnt > 0):
-            pupilId = pupilList[i][1]
-            if self.gui.isPupilChecked(i):
-                self.message(_("Printing report for %1"),
-                        (pupilList[i][0],))
+            pupilId = pupilIds[i]
+            self.message(_("Printing report for %1"), (pupilNames[i],))
 
-                layout = LayoutReport(self.db, pupilId)
+            layout = LayoutReport(self.db, pupilId)
 
-                if pdf:
-                    # Generate a file name based on pupil id and
-                    # page type
-                    fileName = os.path.join(cdir, u"%s_%s.pdf" %
-                            (pupilId, pageType))
-                    self.message(u"  --> %s" % fileName)
-                else:
-                    fileName = None
+            if pdf:
+                # Generate a file name based on pupil id and
+                # page type
+                fileName = os.path.join(cdir, u"%s_%s.pdf" %
+                        (pupilId, pageType))
+                self.message(u"  --> %s" % fileName)
+            else:
+                fileName = None
 
-                pages = self.gui.getPages()
+            pages = self.gui.getPages()
 
-                if (pageType == "multi"):
-                    n = 2       # Only 2*A4 on A3 supported at the moment
-                else:
-                    n = 1
+            if (pageType == "multi"):
+                n = 2       # Only 2*A4 on A3 supported at the moment
+            else:
+                n = 1
 
-                printer = Printer(n, shrink, landscape, fileName)
+            printer = Printer(n, shrink, landscape, fileName)
 
-                if reverse:
-                    pages.reverse()
+            if reverse:
+                pages.reverse()
 
-                first = True    # to control 'newPage'
+            first = True    # to control 'newPage'
 
-                for p in pages: # or sheets
+            for p in pages: # or sheets
 
-                    if p[1]:
-                        page = p[0]
+                if p[1]:
+                    page = p[0]
 
-                        if not first:
-                            printer.newPage()
+                    if not first:
+                        printer.newPage()
 
 
-                        if (pageType == "all"):
-                            self.message(_("  --- page %s") % page)
-                            pplist = [(page, 0)]
-                        else:
-                            self.message(_("  --- sheet %s") % page)
-                            pplist = self.sheetSides[page]
+                    if (pageType == "all"):
+                        self.message(_("  --- page %s") % page)
+                        pplist = [(page, 0)]
+                    else:
+                        self.message(_("  --- sheet %s") % page)
+                        pplist = self.sheetSides[page]
 
-                        for pageName, pos in pplist:
-                            # find corresponding Page object
-                            try:
-                                ip = self.pages.index(pageName)
-                            except:
-                                error(_("No page with name '%1'"),
-                                         (pageName,))
-                            printer.render(layout.pages[ip].gScene, pos)
+                    for pageName, pos in pplist:
+                        # find corresponding Page object
+                        try:
+                            ip = self.pages.index(pageName)
+                        except:
+                            error(_("No page with name '%1'"),
+                                     (pageName,))
+                        printer.render(layout.pages[ip].gScene, pos)
 
-                        first = False
+                    first = False
 
-                printer.end()
+            printer.end()
 
             if reverse:
                 i -= 1

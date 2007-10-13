@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'checkSpell.ui'
 #
-# Created: Mon Sep 17 21:21:49 2007
+# Created: Fri Oct 12 21:55:50 2007
 #      by: PyQt4 UI code generator 4.3
 #
 # WARNING! All changes made in this file will be lost!
