@@ -1,0 +1,34 @@
+To generate an installation package for windows.
+
+*) All the necessary support libraries, python, etc. must be installed.
+  Also PyInstaller must be unpacked and NSIS (windows installer
+  generator) must be installed.
+
+*) Unpack the zeugs archive (not the source archive).
+
+*) Edit zeugs_PyI.bat to change the paths to PyInstaller and python
+  if necessary.
+
+*) The windows installer for the current version of PyQt4 (4.3.1) is
+  built using the Microsoft compiler and requires the C++ library
+  msvcp71.dll, but it does not include it. If you don't have this
+  already you can get it from the internet. I don't know where the
+  best place to put it is, but I placed it in my python folder
+  (c:\python25) and PyInstaller could pick it up there.
+
+*) Make sure the dictionaries are available in a folder. You need
+  the files for your language ending .dic and .aff (from OpenOffice).
+
+*) Edit zeugs.spec to change any paths that might need adjusting, for example
+  to the dictionary folder.
+
+*) Run zeugs_PyI.bat, by (double?-)clicking on it.
+
+*) Run zeugs-nsi.py, by (double?-)clicking on it (if python is set up to
+  execute.py programs automatically), to generate the NSIS configuration.
+
+*) Run NSIS. This can be done by right-clicking on zeugs.nsi and selecting
+ 'Compile NSIS Script'.
+
+*) A Zeugs-Setup-<version>.exe file should appear.
+
