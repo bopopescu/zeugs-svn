@@ -19,7 +19,7 @@
 # along with Zeugs; if not, write to the Free Software Foundation, Inc.,
 # 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
 #
-"""This module deals with dumping and restoring a master database.
+"""This module deals with dumping and restoring a main database.
 The dump is an sqlite database file.
 A variation of dumping is also supported where only the files
 relevant to a single teacher are dumped, for use in the report editor.
@@ -28,7 +28,7 @@ from traceback import print_exc
 
 from dbWrap import DB as DBn
 from database import DB, makeReportsDict, readData
-from dbWrapMaster import teacher2user
+from dbWrapMain import teacher2user
 from guiDialogs import confirmationDialog
 
 import os
@@ -55,7 +55,7 @@ def checkOverwrite(path, force):
     return True
 
 class Dump:
-    """Create a slave (sqlite) database file in the given directory.
+    """Create a subordinate (sqlite) database file in the given directory.
     It can be a backup/print file (no teacher), or a teacher's
     database file.
     teacher's file: <dbname>_<teacher>.zga
@@ -93,7 +93,7 @@ class Dump:
             return
 
     def run(self, gui):
-        """Copy the master database to the slave.
+        """Copy the main database to the subordinate.
         """
         try:
             # Create tables
@@ -186,8 +186,8 @@ class Dump:
             raise
 
     def dumpTable(self, name, name2=None, filter=".+"):
-        """Copy the contents of table name from the master to
-        table name2 in the slave. If name2 is not given use name.
+        """Copy the contents of table name from the main to
+        table name2 in the subordinate. If name2 is not given use name.
         Both tables are assumed to have the 'standard' fields 'id'
         and 'value'.
         Only copy if the 'id' field matches the filter expression.
@@ -202,7 +202,7 @@ class Dump:
                 self.dbs.send(sqlins, row)
 
     def dumpDataTable(self, filter=".+"):
-        """Copy the files from the table 'data' from master to slave.
+        """Copy the files from the table 'data' from main to subordinate.
         Only copy if the 'id' field matches the filter expression.
         """
         rx = re.compile(filter)
@@ -211,7 +211,7 @@ class Dump:
                 self.dbs.putFile(id, self.dbm.getBFile(id))
 
 class Restore:
-    """Recreate a master database from a backup file (<dbname>_<time>.zgb)
+    """Recreate a main database from a backup file (<dbname>_<time>.zgb)
     """
     def __init__(self, dbpath):
         # Open database file
@@ -232,13 +232,13 @@ class Restore:
             self.dbs.close()
         self.dbs = None
 
-    def setMaster(self, dbm):
-        """Used by client objects to select the master database.
+    def setMain(self, dbm):
+        """Used by client objects to select the main database.
         """
         self.dbm = dbm
 
     def run(self, gui):
-        """Given a fresh empty master database in self.dbm, fill it from
+        """Given a fresh empty main database in self.dbm, fill it from
         the open backup database file (self.dbs).
         """
         try:
@@ -296,8 +296,8 @@ class Restore:
             raise
 
     def restoreTable(self, name, name2=None):
-        """Copy the contents of table name from the slave to
-        table name2 in the master. If name2 is not given use name.
+        """Copy the contents of table name from the subordinate to
+        table name2 in the main. If name2 is not given use name.
         Both tables are assumed to have the 'standard' fields 'id'
         and 'value'.
         """
@@ -309,7 +309,7 @@ class Restore:
             self.dbm.send(sqlins, row)
 
     def restoreDataTable(self):
-        """Copy the files from the table 'data' from master to slave.
+        """Copy the files from the table 'data' from main to subordinate.
         """
         for id in self.dbs.listIds(u"data"):
             self.dbm.putFile(id, self.dbs.getBFile(id))

@@ -20,7 +20,7 @@
 # along with Zeugs; if not, write to the Free Software Foundation, Inc.,
 # 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
 #
-"""A wrapper for the master database functions. PostgreSQL version.
+"""A wrapper for the main database functions. PostgreSQL version.
 
 Allows relatively easy switching to another DB management/access scheme.
 Texts should be in unicode.
@@ -40,7 +40,7 @@ DEFAULTPASSWORD = u"None"       # for normal users
 USERPREFIX = u"z_"
 
 def teacher2user(teacherTag):
-    """This is the function to get the master database user role
+    """This is the function to get the main database user role
     corresponding to the given teacher. It is the same as the name
     of that teacher's report table.
     """

@@ -3,7 +3,7 @@
 
 """Set up the Zeugs control database.
 
-Once the master database server (I assume PostgreSQL) has been
+Once the main database server (I assume PostgreSQL) has been
 installed and set up, a control database for the Zeugs system must
 be created by a superuser. This database is called 'zeugscontrol'.
 SQL:

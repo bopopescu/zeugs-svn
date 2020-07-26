@@ -20,8 +20,8 @@
 # along with Zeugs; if not, write to the Free Software Foundation, Inc.,
 # 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
 #
-"""Synchronize a Zeugs database file (*.zga) with its master database.
-Transfer any updated reports to the master.
+"""Synchronize a Zeugs database file (*.zga) with its main database.
+Transfer any updated reports to the main.
 """
 
 # Clients should first read 'updatetime' and then 'unstable' before
@@ -36,7 +36,7 @@ from backup import Dump
 from guiDialogs import getDirectory, getFile, confirmationDialog
 from guiOutput import Output
 from database import DB as DBs
-from dbWrapMaster import DB as DBm, teacher2user
+from dbWrapMain import DB as DBm, teacher2user
 
 from time import sleep
 from subprocess import Popen, PIPE
@@ -91,7 +91,7 @@ class SyncPanel:
 
         self.dbm = None
         # Get the default host name from the 'base' data
-        self.dbhost = self.dbs.baseDict[u"masterHost"]
+        self.dbhost = self.dbs.baseDict[u"mainHost"]
 
         # Get information from the 'config' table
         self.dbname = self.dbs.getConfig(u"dbname")
@@ -130,7 +130,7 @@ class SyncPanel:
                 self.dlg.done()
             else:
                 warning(_("This database is finalized, you can't access it"))
-            # Disconnect from master database
+            # Disconnect from main database
             self.disconnect()
 
     def closeFile(self):
@@ -141,7 +141,7 @@ class SyncPanel:
             self.dbs = None
 
     def connect(self):
-        """Connect to master db.
+        """Connect to main db.
         """
         host = self.gui.getDBhost()
         pw = getPw(host, self.dbname, self.dbuser)
@@ -155,13 +155,13 @@ class SyncPanel:
 
         db = DBm(cData)
         if not db.isOpen():
-            warning(_("Couldn't open master database"))
+            warning(_("Couldn't open main database"))
             return False
         self.dbm = db
         return True
 
     def disconnect(self):
-        """Disconnect from master db.
+        """Disconnect from main db.
         """
         if self.dbm:
             self.dbm.close()
@@ -169,9 +169,9 @@ class SyncPanel:
 
 
 def synchronize(dbm, filepath, gui):
-    """Synchronize the given file with the given (open) master database.
+    """Synchronize the given file with the given (open) main database.
     """
-    # Current master time
+    # Current main time
     mtime = dbm.getTime()
     # Move the user database file to backup location
     dir = os.path.dirname(filepath)
@@ -209,20 +209,20 @@ def synchronize(dbm, filepath, gui):
     teacher = dbs.getConfig(u"me")
     mtb = teacher2user(teacher)
     if mtb not in dbm.getTeacherTables():
-        warning(_("%1: Owning teacher (%2) not known to master database"),
+        warning(_("%1: Owning teacher (%2) not known to main database"),
                 (filepath, teacher))
         return
 
-    gui.report(_("Copying reports from user database to master"))
+    gui.report(_("Copying reports from user database to main"))
     # Counter for transferred reports
     rcount = 0
-    # Creation time of slave db, i.e. last sync time
+    # Creation time of subordinate db, i.e. last sync time
     ctime = dbs.getConfig(u"createtime")
     # Get all updated reports
     for id, data in dbs.read(u"SELECT * FROM reports"):
         # Split off the version data
         dver, drep = data.split(u"\n", 1)
-        # Get the master version data
+        # Get the main version data
         try:
             mver = dbm.readValue(mtb, id).split(u"\n", 1)[0]
         except:
@@ -230,24 +230,24 @@ def synchronize(dbm, filepath, gui):
 
         if (mver > ctime):
             if confirmationDialog(_("Report update problem"),
-                    _("Master version of report has been updated"
+                    _("Main version of report has been updated"
                     " since this client was last synchronized.\n"
                     "   Replace that version of '%s'?") % id, False):
-                gui.report(_("Revised master version of report '%s'"
+                gui.report(_("Revised main version of report '%s'"
                         " will be overwritten") % id)
             else:
-                gui.report(_("Revised master version of report '%s'"
+                gui.report(_("Revised main version of report '%s'"
                         " not overwritten") % id)
                 continue
 
         elif (dver <= mver):
             # Only do anything if the local version is newer than the
-            # the master version
+            # the main version
             continue
 
         if (dver > mtime):
             # The new version has a time stamp later than the
-            # current time on the master, adjust it
+            # current time on the main, adjust it
             if dver.endswith(u"$"):
                 dver = mtime + u"$"
             else:
@@ -275,7 +275,7 @@ def synchronize(dbm, filepath, gui):
     recreate(dbm, filepath, teacher, gui)
 
 def recreate(dbm, filepath, user, gui):
-    """Recreate the user database, taking master update lock
+    """Recreate the user database, taking main update lock
     into consideration. NOTE that this 'lock' is not 100%
     effective, but it is a simple method which I hope will be
     adequate for the envisaged application.
@@ -285,10 +285,10 @@ def recreate(dbm, filepath, user, gui):
         udt = getudtime(dbm)
         if not mUnstable(dbm):
             break
-        gui.report(_("Master database is in unstable state.\n  Waiting ..."))
+        gui.report(_("Main database is in unstable state.\n  Waiting ..."))
         sleep(10)
 
-    # Dump the master database to the selected file
+    # Dump the main database to the selected file
     while True:
         dump = Dump(dbm, dir, user)
         if dump.filepath:
@@ -308,11 +308,11 @@ def recreate(dbm, filepath, user, gui):
     fp = dump.filepath
     dump = None
     if fp:
-        # Check master database hasn't been updated
+        # Check main database hasn't been updated
         if (udt == getudtime(dbm)):
             gui.report(_("\nSUCCESS! - User database regenerated"))
         else:
-            gui.report(_("Master has been updated,"
+            gui.report(_("Main has been updated,"
                     " need to repeat...\n"))
             recreate(dbm, filepath, user, gui)
     else:
@@ -320,12 +320,12 @@ def recreate(dbm, filepath, user, gui):
                 " --- Please contact administrator!"))
 
 def getudtime(dbm):
-    """Fetch the last update time of the master database.
+    """Fetch the last update time of the main database.
     """
     return dbm.readValue(u"config", u"updatetime")
 
 def mUnstable(dbm):
-    """Return True if the master database is unstable (itself
+    """Return True if the main database is unstable (itself
     being updated)
     """
     return (dbm.readValue(u"config", u"unstable") != u"")

@@ -25,19 +25,19 @@ import os
 
 from database import makeReportsDict, DBVERSION, makeReportValue
 #from readData import ReadData, getPath
-from dbWrapMaster import teacher2user
+from dbWrapMain import teacher2user
 
 # Initialization info for 'config' table.
 INITCONFIG = (
 # Database format version
         (u"dbversion"   , DBVERSION),
-# The teacher who owns this db - the master version has '' here,
+# The teacher who owns this db - the main version has '' here,
         (u"me"          , u""),
 # Last configuration update time
         (u"updatetime"  , u""),
-# Master database stability flag (for use during updating)
+# Main database stability flag (for use during updating)
         (u"unstable"    , u"1"),
-# Master database finalized flag (no normal user updates)
+# Main database finalized flag (no normal user updates)
         (u"finalized"   , u""),
 # Time of last backup
         (u"backuptime"  , u""),
@@ -49,15 +49,15 @@ INITCONFIG = (
         (u"pupilId"     , u"")
 )
 
-class MakeMaster:
-    """This class handles (re)generation of a master database from
+class MakeMain:
+    """This class handles (re)generation of a main database from
     a configuration/layout file.
     """
     def __init__(self, source, db):
         """The config file passed as an open CfgZip object in source,
-        db is the master database object (DB).
+        db is the main database object (DB).
         """
-        self.db = db            # master database (DB) object
+        self.db = db            # main database (DB) object
         self.source = source    # open CfgZip object
 
     def run(self, gui=None):

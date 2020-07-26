@@ -27,10 +27,10 @@ import os
 from shutil import copyfile
 import re
 
-from dbWrapMaster import DB as DBm, ADMIN, USERROLE, \
+from dbWrapMain import DB as DBm, ADMIN, USERROLE, \
         DEFAULTPASSWORD, teacher2user
 from guiDialogs import getDirectory, confirmationDialog, getFile
-from makeMaster import MakeMaster
+from makeMain import MakeMain
 from guiReport import guiReport
 from backup import Dump, Restore
 from database import DB as DBs, sini2dict
@@ -45,7 +45,7 @@ class ControlPanel:
     slot declarations.
     """
     def __init__(self, settings):
-        self.master = None      # The (reports) master database
+        self.main = None      # The (reports) main database
         self.settings = settings # Coniguration persistence facility
         # The following item remembers the printer instance
         # started from the control panel, so that it can be started
@@ -178,27 +178,27 @@ class ControlPanel:
                     (self.db.getTime(), dbname, u'', u''))
             state = 2
 
-            newmaster = self.connect(dbname)
+            newmain = self.connect(dbname)
             state = 3
 
             guimessage = argSub(_("New database '%1' created, now read in the data"),
                     (dbname,))
-            mm = MakeMaster(source, newmaster)
+            mm = MakeMain(source, newmain)
             guiReport(_("Create New Database"), mm, guimessage)
             #message(_("New database now set up"))
 
-            self.usersPrivileges(newmaster)
+            self.usersPrivileges(newmain)
             # Ensure connection is closed
             mm = None
-            newmaster.close()
-            newmaster = None
+            newmain.close()
+            newmain = None
 
         except:
 #            print_exc()
 
             message(_("Couldn't create new database (%1)"), (dbname,))
             if (state >= 3):
-                newmaster.close()
+                newmain.close()
             if (state >= 2):
                 self.db.send(u"DELETE FROM databases WHERE name = ?",
                         (dbname,))
@@ -231,7 +231,7 @@ class ControlPanel:
         budir = os.path.join(os.path.dirname(sPath), 'dumps')
         if not os.path.isdir(budir):
             os.mkdir(budir)
-        backup = Dump(self.master, budir)
+        backup = Dump(self.main, budir)
         filepath = backup.filepath
         if not filepath: return
 
@@ -245,8 +245,8 @@ class ControlPanel:
         try:
             guimessage = argSub(_("Updating database '%1' from %2"),
                     (self.dbname, sPath))
-            mm = MakeMaster(source, self.master)
-            guiReport(_("Updating Master Database"), mm, guimessage)
+            mm = MakeMain(source, self.main)
+            guiReport(_("Updating Main Database"), mm, guimessage)
             mm = None
 
         except:
@@ -261,16 +261,16 @@ class ControlPanel:
                 return
 
             # Delete all tables
-            for t in self.master.getTables():
-                self.master.send(u"DROP TABLE %s" % t)
+            for t in self.main.getTables():
+                self.main.send(u"DROP TABLE %s" % t)
 
             # Restore old state
             guimessage = argSub(_("Database '%1' cleared, now restore the data"),
                     (dbname,))
-            restore.setMaster(self.master)
+            restore.setMain(self.main)
             guiReport(_("Restore Database"), restore, guimessage)
 
-        self.usersPrivileges(self.master)
+        self.usersPrivileges(self.main)
 
         # adjust display, select new db
         self.initDBlist()
@@ -361,7 +361,7 @@ class ControlPanel:
                 argSub(_("Do you really want to delete database '%1'?"),
                         (self.dbname,)), False):
             return
-        if not self.master:
+        if not self.main:
             return
         self.deletedb(self.dbname)
 
@@ -369,9 +369,9 @@ class ControlPanel:
         self.initDBlist()
 
     def deletedb(self, name):
-        if self.master:
-            self.master.close()
-            self.master = None
+        if self.main:
+            self.main.close()
+            self.main = None
         try:
             self.db.send(u"DROP DATABASE %s" % name)
         except:
@@ -392,7 +392,7 @@ class ControlPanel:
             self.removeUser(t)
 
     def slot_newdbIndex(self, index):
-        """The current master database has changed. Disconnect from
+        """The current main database has changed. Disconnect from
         the old one and connect to the new one.
         """
         if (index < 0):
@@ -400,25 +400,25 @@ class ControlPanel:
             return
         self.dbname = self.dbList[index]
 
-        if self.master:
-            self.master.close()
-        self.master = self.connect(self.dbname)
+        if self.main:
+            self.main.close()
+        self.main = self.connect(self.dbname)
 
         # Set 'finalized' state
-        fin = self.master.readValue(u"config", u"finalized").strip()
+        fin = self.main.readValue(u"config", u"finalized").strip()
         self.showFinalized(fin != u"")
 
         # Set 'self.users' to an ordered list of teacher (tag, name)
         # pairs and set the teacher comboBox
         teachers = [path.split(u"/")[1]
-                for path in self.master.listIds(u"data")
+                for path in self.main.listIds(u"data")
                 if path.startswith(u"teachers/")]
         teachers.sort()
 
         usrstrings = []
         self.users = []
         for t in teachers:
-            n = sini2dict(self.master.getFile(u"teachers/" + t))[u"Name"]
+            n = sini2dict(self.main.getFile(u"teachers/" + t))[u"Name"]
             self.users.append((t, n))
             usrstrings.append(u"%s (%s)" % (t, n))
         self.gui.setUserList(usrstrings)
@@ -441,7 +441,7 @@ class ControlPanel:
     def slot_selectTeachers(self, arg):
         """Check all teachers in the comboBox.
         """
-        if self.master:
+        if self.main:
             for i in range(len(self.users)):
                 self.gui.userListSetChecked(i, True)
 
@@ -455,7 +455,7 @@ class ControlPanel:
         self.settings.setSetting("destDir", dbpath)
 
         # Do the dump
-        backup = Dump(self.master, dbpath)
+        backup = Dump(self.main, dbpath)
         if not backup.filepath: return
 
         guimessage = argSub(_("New backup file '%1' opened, now write in the data"),
@@ -490,10 +490,10 @@ class ControlPanel:
 
     def dump(self, dbpath, user, isList=False):
         if isList and user:
-            backup = DumpUsers(user, self.master, dbpath)
+            backup = DumpUsers(user, self.main, dbpath)
             guimessage = _("Creating multiple user database files ...\n")
         else:
-            backup = Dump(self.master, dbpath, user)
+            backup = Dump(self.main, dbpath, user)
             if not backup.filepath: return None
             guimessage = argSub(_("Database file '%1' created, now"
                     " read in the data"), (backup.filepath,))
@@ -551,28 +551,28 @@ class ControlPanel:
                     (self.db.getTime(), dbname, u'', u''))
             state = 2
 
-            newmaster = self.connect(dbname)
+            newmain = self.connect(dbname)
             state = 3
 
             guimessage = argSub(_("New database '%1' created, now read in the data"),
                     (dbname,))
-            restore.setMaster(newmaster)
+            restore.setMain(newmain)
             guiReport(_("Restore Database"), restore, guimessage)
             #message(_("New database now set up"))
 
-            self.usersPrivileges(newmaster)
+            self.usersPrivileges(newmain)
 
             # Ensure connection is closed
             restore = None
-            newmaster.close()
-            newmaster = None
+            newmain.close()
+            newmain = None
 
         except:
             print_exc()
 
             message(_("Couldn't create new database (%1)"), (dbname,))
             if (state >= 3):
-                newmaster.close()
+                newmain.close()
             if (state >= 2):
                 self.db.send(u"DELETE FROM databases WHERE name = ?",
                         (dbname,))
@@ -587,7 +587,7 @@ class ControlPanel:
         Set the 'finalized' item in the 'config' table and revoke
         update privelege from teachers.
         """
-        if (not self.master) or (on == self.finalized):
+        if (not self.main) or (on == self.finalized):
             return
 
         if on:
@@ -599,10 +599,10 @@ class ControlPanel:
             val = u"1"
         else:
             val = u""
-        self.master.send(u"""UPDATE config SET value= ?
+        self.main.send(u"""UPDATE config SET value= ?
                 WHERE id = 'finalized'""", (val,))
         self.showFinalized(on)
-        self.usersPrivileges(self.master)
+        self.usersPrivileges(self.main)
 
     def showFinalized(self, fin):
         self.finalized = fin
@@ -615,15 +615,15 @@ class ControlPanel:
         filepath = None
         if dir0:
             # See if there is already an adequately new dump file
-            rex = re.compile(r"%s_(\d{8}_\d{6}).zgb$" % self.master.getName())
+            rex = re.compile(r"%s_(\d{8}_\d{6}).zgb$" % self.main.getName())
             dumpfiles = [f for f in os.listdir(dir0) if rex.match(f)]
             if dumpfiles:
                 dumpfiles.sort()
                 latest = dumpfiles[-1]
                 dumptime = rex.match(latest).group(1)
 
-                udt = self.master.readValue(u"config", u"updatetime")
-                lst = self.master.readValue(u"interface", u"lastsynctime")
+                udt = self.main.readValue(u"config", u"updatetime")
+                lst = self.main.readValue(u"interface", u"lastsynctime")
 
                 if (dumptime > udt) and (dumptime > lst):
                     filepath = os.path.join(dir0, latest)
@@ -672,12 +672,12 @@ class ControlPanel:
         dbs.close()
 
         if (self.dbname != sdbname):
-            warning(_("%s: Database name does not match current master name") %
+            warning(_("%s: Database name does not match current main name") %
                     syncfile)
             return
 
         self.dlg = Output()
-        synchronize(self.master, syncfile, self.dlg)
+        synchronize(self.main, syncfile, self.dlg)
         self.dlg.done()
 
     def removeUser(self, user):
@@ -691,8 +691,8 @@ class ControlPanel:
         return True
 
     def slot_restoreConfigFile(self, arg):
-        if self.master:
-            self.restoreConfigFile(self.master)
+        if self.main:
+            self.restoreConfigFile(self.main)
 
     def restoreConfigFile(self, db):
         """Get a parent directory for the creation of a data file.
@@ -718,9 +718,9 @@ class ControlPanel:
         return datapath
 
 class DumpUsers:
-    def __init__(self, userlist, master, dbpath):
+    def __init__(self, userlist, main, dbpath):
         self.userlist = userlist
-        self.master = master
+        self.main = main
         self.dbpath = dbpath
         self.filepath = None    # Needed on return, but unused
 
@@ -728,7 +728,7 @@ class DumpUsers:
         failList = []
         for user in self.userlist:
             gui.report(u"::: " + user)
-            backup = Dump(self.master, self.dbpath, user)
+            backup = Dump(self.main, self.dbpath, user)
             if not backup.filepath:
                 failList.append(user)
                 continue

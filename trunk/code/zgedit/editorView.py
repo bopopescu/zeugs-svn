@@ -121,7 +121,7 @@ class EditorView:
         slot("autospellcheck", self.slot_autospellcheck)
 
     def slot_sync(self, arg):
-        """Synchronize the present database file with the master
+        """Synchronize the present database file with the main
         database.
         """
         if not self.db:
@@ -181,7 +181,7 @@ class EditorView:
         self.rsubject = None
 
         if not self.db.owner:
-            warning(_("This is a master database - editing is not permitted"))
+            warning(_("This is a main database - editing is not permitted"))
             return False
 
         # Adjust characters for spell-checking etc.

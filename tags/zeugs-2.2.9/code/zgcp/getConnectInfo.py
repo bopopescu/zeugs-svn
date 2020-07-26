@@ -21,7 +21,7 @@
 # 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
 #
 """A simple dialog to fetch the connection parameters for the
-master (by default PostgreSQL) database.
+main (by default PostgreSQL) database.
 """
 # pyuic4 command:
 #      pyuic4 -o ui_dlg_connect.py dlg_connect.ui
@@ -35,7 +35,7 @@ CONTROLDB = u"zeugscontrol2"
 from PyQt4 import QtCore, QtGui
 
 import ui_dlg_connect as ui_dlg
-from dbWrapMaster import ADMIN
+from dbWrapMain import ADMIN
 from gui0 import Application
 
 def getConnectInfo(settings, user):

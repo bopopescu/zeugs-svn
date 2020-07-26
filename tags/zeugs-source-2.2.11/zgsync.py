@@ -3,7 +3,7 @@
 
 """The zeugs synchronization utility.
 For transferring edited reports (and comments) from a user's database
-to the master and updated configuration information from the master
+to the main and updated configuration information from the main
 to the client (well, actually the client database file is replaced).
 """
 

@@ -21,7 +21,7 @@
 # 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
 #
 """A simple dialog to fetch the password for connecting to the
-master (PostgreSQL) database.
+main (PostgreSQL) database.
 """
 # pyuic4 command:
 #      pyuic4 -o ui_dlg_getPw.py dlg_getPw.ui
